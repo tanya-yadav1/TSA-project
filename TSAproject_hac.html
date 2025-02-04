@@ -1,0 +1,3503 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      .folder {
+        cursor: pointer;
+
+        margin-left: 20px;
+      }
+
+      .content {
+        display: none;
+
+        margin-left: 40px;
+      }
+    </style>
+
+    <title>Clickable Folders</title>
+  </head>
+
+  <body>
+    <h1>HAC</h1>
+    <form id="funcalg1-form" onsubmit="moveSelectedItems(event)">
+      <div class="folder" onclick="toggleContent('math')">Math</div>
+
+      <div id="math" class="content">
+        <!--Algebra 1-->
+
+        <div class="folder" onclick="toggleContent('algebra1')">Algebra 1</div>
+
+        <div id="algebra1" class="content">
+          <div class="folder" onclick="toggleContent('funca1')">
+            <label
+              ><input type="checkbox" name="items" value="Functional Algebra 1" /> Functional
+              Algebra 1</label
+            >
+          </div>
+
+          <div id="funca1" class="content">
+            <p class="course">Prerequisite: ARD Committee Decision</p>
+
+            <p class="course">Grade: 9</p>
+          </div>
+
+          <div class="folder" onclick="toggleContent('basica1')">
+            <label
+              ><input type="checkbox" name="items" value="Basic Algebra 1" /> Basic Algebra 1</label
+            ><br />
+          </div>
+
+          <div id="basica1" class="content">
+            <p class="course">Prerequisite: ARD Committee Decision</p>
+
+            <p class="course">Grade: 9</p>
+          </div>
+
+          <div class="folder" onclick="toggleContent('onlevela1')">
+            <label><input type="checkbox" name="items" value="Algebra 1"> Algebra 1</label><br>
+          </div>
+
+          <div id="onlevela1" class="content">
+            <p class="course">Prerequisite: None</p>
+
+            <p class="course">Grade: 9</p>
+
+            <p class="course">Level: 2</p>
+          </div>
+
+          <div class="folder" onclick="toggleContent('honorsa1')">
+            <label><input type="checkbox" name="items" value="Algebra 1 Honors"> Algebra 1 Honors</label><br>
+          </div>
+
+          <div id="honorsa1" class="content">
+            <p class="course">Prerequisite: None</p>
+
+            <p class="course">Grade: 9</p>
+
+            <p class="course">Level: 3</p>
+          </div>
+        </div>
+
+        <!--Geometry-->
+
+        <div class="folder" onclick="toggleContent('geometry')">Geometry</div>
+
+        <div id="geometry" class="content">
+          <div class="folder" onclick="toggleContent('funcg')">
+            <label><input type="checkbox" name="items" value="Functional Geometry" /> Functional
+              Geometry</label>
+          </div>
+
+          <div id="funcg" class="content">
+            <p class="course">Prerequisite: ARD Committee Decision</p>
+
+            <p class="course">Grade: 9-10</p>
+
+            <p class="course">Level: 2</p>
+          </div>
+
+          <div class="folder" onclick="toggleContent('basicg')">
+            <label><input type="checkbox" name="items" value="Basic Geometry"/> Basic Geometry</label
+            >
+          </div>
+
+          <div id="basicg" class="content">
+            <p class="course">Prerequisite: ARD Committee Decision</p>
+
+            <p class="course">Grade: 10</p>
+
+            <p class="course">Level: 2</p>
+          </div>
+
+          <div class="folder" onclick="toggleContent('onlevelg')">
+          <label><input type="checkbox" name="items" value="Geometry" />Geometry</label
+            ></div>
+
+          <div id="onlevelg" class="content">
+            <p class="course">Prerequisite: Algebra 1</p>
+
+            <p class="course">Grade: 9-10</p>
+
+            <p class="course">Level: 2</p>
+          </div>
+
+          <div class="folder" onclick="toggleContent('honorsg')">
+            <label><input type="checkbox" name="items" value="Geometry Honors" />Geometry Honors</label
+            >
+          </div>
+
+          <div id="honorsg" class="content">
+            <p class="course">Prerequisite: None</p>
+
+            <p class="course">Grade: 9-10</p>
+
+            <p class="course">Level: 3</p>
+          </div>
+        </div>
+
+        <!--Math Models-->
+
+        <div class="folder" onclick="toggleContent('mathmodels')">
+          Math Models
+        </div>
+
+        <div id="mathmodels" class="content">
+          <div class="folder" onclick="toggleContent('funcmm')">
+            <label><input type="checkbox" name="items" value="Functional Math Models With Applications" />Functional Math Models With Applications</label
+            >
+          </div>
+
+          <div id="funcmm" class="content">
+            <p class="course">Prerequisite: ARD Committee Decision</p>
+
+            <p class="course">Grade: 10-11</p>
+
+            <p class="course">Level: 2</p>
+          </div>
+
+          <div class="folder" onclick="toggleContent('basicmm')">
+            <label><input type="checkbox" name="items" value="Basic Math Models With Applications" />Basic Math Models With Applications</label
+            >
+          </div>
+
+          <div id="basicmm" class="content">
+            <p class="course">Prerequisite: ARD Committee Decision</p>
+
+            <p class="course">Grade: 10-11</p>
+
+            <p class="course">Level: 2</p>
+          </div>
+
+          <div class="folder" onclick="toggleContent('onlevelmm')">
+            <label><input type="checkbox" name="items" value="Math Models With Applications" />Math Models With Applications</label
+            >
+          </div>
+
+          <div id="onlevelmm" class="content">
+            <p class="course">Prerequisite: Algebra 1</p>
+
+            <p class="course">Grade: 10-11</p>
+
+            <p class="course">Level: 2</p>
+          </div>
+        </div>
+
+        <!--Algebra II-->
+
+        <div class="folder" onclick="toggleContent('algebra2')">Algebra II</div>
+
+        <div id="algebra2" class="content">
+          <div class="folder" onclick="toggleContent('funcal2')">
+            <label><input type="checkbox" name="items" value="Functional Algebra II" />Functional Algebra II</label
+            >
+          </div>
+
+          <div id="funcal2" class="content">
+            <p class="course">Prerequisite: ARD Committee Decision</p>
+
+            <p class="course">Grade: 11</p>
+          </div>
+
+          <div class="folder" onclick="toggleContent('basical2')">
+            <label><input type="checkbox" name="items" value="Basic Algebra II" />Basic Algebra II</label
+            >
+          </div>
+
+          <div id="basical2" class="content">
+            <p class="course">Prerequisite: ARD Committee Decision</p>
+
+            <p class="course">Grade: 10</p>
+          </div>
+
+          <div class="folder" onclick="toggleContent('onlevela12')">
+            <label><input type="checkbox" name="items" value="Algebra II" />Algebra II</label
+            >
+          </div>
+
+          <div id="onlevela12" class="content">
+            <p class="course">Prerequisite: Geomtry</p>
+
+            <p class="course">Grade: 11</p>
+
+            <p class="course">Level: 2</p>
+          </div>
+
+          <div class="folder" onclick="toggleContent('honorsa12')">
+            <label><input type="checkbox" name="items" value="Algebra II Honors" />Algebra II Honors</label
+            >
+          </div>
+
+          <div id="honorsa12" class="content">
+            <p class="course">Prerequisite: Geometry</p>
+
+            <p class="course">Grade: 11</p>
+
+            <p class="course">Level: 3</p>
+          </div>
+        </div>
+
+        <!--advanced math classes-->
+
+        <div class="folder" onclick="toggleContent('additionalmath')">
+          Additional Math Courses
+        </div>
+
+        <div id="additionalmath" class="content">
+          <div class="folder" onclick="toggleContent('precalc')">
+            <label><input type="checkbox" name="items" value="Pre-Calculus: Preperation for Calculus" />Pre-Calculus: Preperation for Calculus</label
+            >
+          </div>
+
+          <div id="precalc" class="content">
+            <p class="course">Prerequisite: Algebra II</p>
+
+            <p class="course">Grade: 10-12</p>
+
+            <p class="course">Level: 3</p>
+          </div>
+
+          <div class="folder" onclick="toggleContent('stats')">
+            <label><input type="checkbox" name="items" value="Statistics and Business Decision Making" />Statistics and Business Decision Making</label
+            >
+          </div>
+
+          <div id="stats" class="content">
+            <p class="course">Prerequisite: Algebra II</p>
+
+            <p class="course">Grade: 10-12</p>
+
+            <p class="course">Level: 3</p>
+          </div>
+
+          <!--ap courses-->
+
+          <div class="folder" onclick="toggleContent('mathap')">AP Courses</div>
+
+          <div id="mathap" class="content">
+            <div class="folder" onclick="toggleContent('apprecalc')">
+              <label><input type="checkbox" name="items" value="AP Pre-Calculus: Preperation for Calculus" />AP Pre-Calculus: Preperation for Calculus</label
+            >
+            </div>
+
+            <div id="apprecalc" class="content">
+              <p class="course">Prerequisite: Algebra II</p>
+
+              <p class="course">Grade: 10-12</p>
+
+              <p class="course">Level: 4</p>
+            </div>
+
+            <div class="folder" onclick="toggleContent('apstats')">
+              <label><input type="checkbox" name="items" value="AP Statistics" />AP Statistics</label
+            >
+            </div>
+
+            <div id="apstats" class="content">
+              <p class="course">Prerequisite: Algebra II</p>
+
+              <p class="course">Grade: 10-12</p>
+
+              <p class="course">Level: 4</p>
+            </div>
+
+            <div class="folder" onclick="toggleContent('apcalcab')">
+             <label><input type="checkbox" name="items" value="AP Calculus AB" />AP Calculus AB</label
+            >
+            </div>
+
+            <div id="apcalcab" class="content">
+              <p class="course">
+                Prerequisite: Pre-Calculus or AP Pre-Calculus
+              </p>
+
+              <p class="course">Grade: 10-12</p>
+
+              <p class="course">Level: 4</p>
+            </div>
+
+            <div class="folder" onclick="toggleContent('apcalcbc')">
+              <label><input type="checkbox" name="items" value="AP Calculus BC" />AP Calculus BC</label
+            >
+            </div>
+
+            <div id="apcalcbc" class="content">
+              <p class="course">
+                Prerequisite: Pre-Calculus or AP Pre-Calculus
+              </p>
+
+              <p class="course">Grade: 10-12</p>
+
+              <p class="course">Level: 4</p>
+            </div>
+          </div>
+
+          <!--ib courses-->
+
+          <div class="folder" onclick="toggleContent('ibmath')">IB Courses</div>
+
+          <div id="ibmath" class="content">
+            <div class="folder" onclick="toggleContent('ibmathsl1')">
+            <label><input type="checkbox" name="items" value="IB Math Analysis SL I" />IB Math Analysis SL I</label
+            >
+          
+            </div>
+
+            <div id="ibmathsl1" class="content">
+              <p class="course">Prerequisite: Algebra II or higher</p>
+
+              <p class="course">Grade: 11</p>
+
+              <p class="course">Level: 4</p>
+            </div>
+
+            <div class="folder" onclick="toggleContent('ibmathhl1')">
+            <label><input type="checkbox" name="items" value="IB Math Analysis HL I" />IB Math Analysis HL I</label
+            >
+              
+            </div>
+
+            <div id="ibmathhl1" class="content">
+              <p class="course">Prerequisite: Algebra II or higher</p>
+
+              <p class="course">Grade: 11</p>
+
+              <p class="course">Level: 4</p>
+            </div>
+
+            <div class="folder" onclick="toggleContent('ibmathsl2')">
+             <label><input type="checkbox" name="items" value="IB Math Analysis SL II" />IB Math Analysis SL II</label
+            >
+             
+            </div>
+
+            <div id="ibmathsl2" class="content">
+              <p class="course">Prerequisite: IB Math Analysis SL I</p>
+
+              <p class="course">Grade: 12</p>
+
+              <p class="course">Level: 4</p>
+            </div>
+
+            <div class="folder" onclick="toggleContent('ibmathhl2')">
+            <label><input type="checkbox" name="items" value="IB Math Analysis HL II" />IB Math Analysis HL II</label
+            >
+             
+            </div>
+
+            <div id="ibmathhl2" class="content">
+              <p class="course">Prerequisite: IB Math Analysis HL I</p>
+
+              <p class="course">Grade: 12</p>
+
+              <p class="course">Level: 4</p>
+            </div>
+
+            <div class="folder" onclick="toggleContent('ibmathappsl2')">
+            <label><input type="checkbox" name="items" value="IB Math Applications SL I" />IB Math Applications SL I</label
+            >
+              
+            </div>
+
+            <div id="ibmathappsl2" class="content">
+              <p class="course">Prerequisite: Algebra II</p>
+
+              <p class="course">Grade: 11-12</p>
+
+              <p class="course">Level: 4</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--english-->
+
+      <div class="folder" onclick="toggleContent('english')">English</div>
+
+      <div id="english" class="content">
+        <!--english 1-->
+
+        <div class="folder" onclick="toggleContent('english1')">English I</div>
+
+        <div id="english1" class="content">
+          <div class="folder" onclick="toggleContent('funcenglish1')">
+          <label><input type="checkbox" name="items" value="Functional English I" />Functional English I</label
+            >
+            
+          </div>
+
+          <div id="funcenglish1" class="content">
+            <p class="course">Prerequisite: ARD Committee Decision</p>
+
+            <p class="course">Grade: 9</p>
+
+            <p class="course">Level: 2</p>
+          </div>
+
+          <div class="folder" onclick="toggleContent('basicenglish1')">
+      <label><input type="checkbox" name="items" value="Basic English I" />Basic English I</label
+            >
+          </div>
+
+          <div id="basicenglish1" class="content">
+            <p class="course">Prerequisite: ARD Committee Decision</p>
+
+            <p class="course">Grade: 9</p>
+
+            <p class="course">Level: 2</p>
+          </div>
+
+          <div class="folder" onclick="toggleContent('onlevelenglish1')">
+            <label><input type="checkbox" name="items" value="English I" />English I</label
+            >
+          </div>
+
+          <div id="onlevelenglish1" class="content">
+            <p class="course">Prerequisite: None</p>
+
+            <p class="course">Grade: 9</p>
+
+            <p class="course">Level: 2</p>
+          </div>
+
+          <div class="folder" onclick="toggleContent('honorsenglish1')">
+            <label><input type="checkbox" name="items" value="English I Honors" />English I Honors</label
+            >
+          </div>
+
+          <div id="honorsenglish1" class="content">
+            <p class="course">Prerequisite: None</p>
+
+            <p class="course">Grade: 9</p>
+
+            <p class="course">Level: 3</p>
+          </div>
+        </div>
+
+        <!--english 2-->
+
+        <div class="folder" onclick="toggleContent('english2')">English II</div>
+
+        <div id="english2" class="content">
+          <div class="folder" onclick="toggleContent('funcenglish2')">
+             <label><input type="checkbox" name="items" value="Functional English II" />Functional English II</label
+            >
+          </div>
+
+          <div id="funcenglish2" class="content">
+            <p class="course">Prerequisite: ARD Committee Decision</p>
+
+            <p class="course">Grade: 10</p>
+
+            <p class="course">Level: 2</p>
+          </div>
+
+          <div class="folder" onclick="toggleContent('basicenglish2')">
+          <label><input type="checkbox" name="items" value=" Basic English II" /> Basic English II</label
+            >
+          </div>
+
+          <div id="basicenglish2" class="content">
+            <p class="course">Prerequisite: ARD Committee Decision</p>
+
+            <p class="course">Grade: 10</p>
+
+            <p class="course">Level: 2</p>
+          </div>
+
+          <div class="folder" onclick="toggleContent('eslenglish2')">
+          <label><input type="checkbox" name="items" value=" English II For ESL Newcomer" /> English II For ESL Newcomer</label
+            >
+            
+          </div>
+
+          <div id="eslenglish2" class="content">
+            <p class="course">
+              Prerequisite: Must be LPAC recommended based on EB Status
+            </p>
+
+            <p class="course">Grade: 10</p>
+
+            <p class="course">Level: 2</p>
+          </div>
+
+          <div class="folder" onclick="toggleContent('onlevelenglish2')">
+             <label><input type="checkbox" name="items" value=" English IIr" /> English II</label
+            >
+          </div>
+
+          <div id="onlevelenglish2" class="content">
+            <p class="course">Prerequisite: English I</p>
+
+            <p class="course">Grade: 10</p>
+
+            <p class="course">Level: 2</p>
+          </div>
+
+          <div class="folder" onclick="toggleContent('honorsenglish2')">
+             <label><input type="checkbox" name="items" value=" English II Honors" /> English II Honors</label
+            >
+          </div>
+
+          <div id="honorsenglish2" class="content">
+            <p class="course">Prerequisite: English II</p>
+
+            <p class="course">Grade: 10</p>
+
+            <p class="course">Level: 3</p>
+          </div>
+        </div>
+
+        <!--english 3-->
+
+        <div class="folder" onclick="toggleContent('english3')">
+          English III
+        </div>
+
+        <div id="english3" class="content">
+          <div class="folder" onclick="toggleContent('funcenglish3')">
+             <label><input type="checkbox" name="items" value=" English III" /> English III</label
+            >
+          </div>
+
+          <div id="funcenglish3" class="content">
+            <p class="course">Prerequisite: ARD Committee Decision</p>
+
+            <p class="course">Grade: 11</p>
+
+            <p class="course">Level: 2</p>
+          </div>
+
+          <div class="folder" onclick="toggleContent('basicenglish3')">
+           <label><input type="checkbox" name="items" value="Basic English III" /> Basic English III</label
+            >
+            
+          </div>
+
+          <div id="basicenglish3" class="content">
+            <p class="course">Prerequisite: ARD Committee Decision</p>
+
+            <p class="course">Grade: 11</p>
+
+            <p class="course">Level: 2</p>
+          </div>
+
+          <div class="folder" onclick="toggleContent('eslenglish3')">
+          <label><input type="checkbox" name="items" value="English III For ESL Newcomer" />  English III For ESL Newcomer</label
+            >
+           
+          </div>
+
+          <div id="eslenglish3" class="content">
+            <p class="course">
+              Prerequisite: Must be LPAC recommended based on EB Status
+            </p>
+
+            <p class="course">Grade: 11</p>
+
+            <p class="course">Level: 2</p>
+          </div>
+
+          <div class="folder" onclick="toggleContent('onlevelenglish3')">
+          <label><input type="checkbox" name="items" value="English III" />  English III</label
+            >
+        
+          </div>
+
+          <div id="onlevelenglish3" class="content">
+            <p class="course">Prerequisite: English I & II</p>
+
+            <p class="course">Grade: 11</p>
+
+            <p class="course">Level: 2</p>
+          </div>
+
+          <div class="folder" onclick="toggleContent('apenglish3')">
+          <label><input type="checkbox" name="items" value="AP Language & Composition (AP English III)" />  AP Language & Composition (AP English III)</label
+            >
+            
+          </div>
+
+          <div id="apenglish3" class="content">
+            <p class="course">
+              Prerequisite: English 2, recommended English 2 Honors
+            </p>
+
+            <p class="course">Grade: 11</p>
+
+            <p class="course">Level: 4</p>
+          </div>
+
+          <div class="folder" onclick="toggleContent('ibenglish3')">
+          <label><input type="checkbox" name="items" value="IB English III: IB Language & Literature A (HL)" />  IB English III: IB Language & Literature A (HL)</label
+            >
+            
+          </div>
+
+          <div id="ibenglish3" class="content">
+            <p class="course">
+              Prerequisite: Recommended Completion of advanced courses in
+              English I & II
+            </p>
+
+            <p class="course">Grade: 11</p>
+
+            <p class="course">Level: 4</p>
+          </div>
+        </div>
+
+        <!--english 4-->
+
+        <div class="folder" onclick="toggleContent('english4')">English IV</div>
+
+        <div id="english4" class="content">
+          <div class="folder" onclick="toggleContent('funcenglish4')">
+          <label><input type="checkbox" name="items" value="Functional English IV" />  Functional English IV</label
+            >
+            
+         </div>
+
+          <div id="funcenglish4" class="content">
+            <p class="course">Prerequisite: ARD Commitee Approval</p>
+
+            <p class="course">Grade: 12</p>
+
+            <p class="course">Level: 2</p>
+          </div>
+
+          <div class="folder" onclick="toggleContent('basicenglish4')">
+             <label><input type="checkbox" name="items" value="Basic English IV" />  Basic English IV</label
+            >
+            
+          </div>
+
+          <div id="basicenglish4" class="content">
+            <p class="course">Prerequisite: ARD Committee Approval</p>
+
+            <p class="course">Grade: 12</p>
+
+            <p class="course">Level: 2</p>
+          </div>
+
+          <div class="folder" onclick="toggleContent('eslenglish4')">
+<label><input type="checkbox" name="items" value="English IV For ESL Newcomer" /> English IV For ESL Newcomer</label
+            >
+          </div>
+
+          <div id="eslenglish4" class="content">
+            <p class="course">Prerequisite: English III</p>
+
+            <p class="course">Grade: 12</p>
+
+            <p class="course">Level: 2</p>
+          </div>
+
+          <div class="folder" onclick="toggleContent('onlevelenglish4')">
+<label><input type="checkbox" name="items" value="English IV" /> English IV</label
+            >
+
+          </div>
+
+          <div id="onlevelenglish4" class="content">
+            <p class="course">Prerequisite: English III</p>
+
+            <p class="course">Grade: 12</p>
+
+            <p class="course">Level: 2</p>
+          </div>
+
+          <div class="folder" onclick="toggleContent('apenglish4')">
+<label><input type="checkbox" name="items" value="AP Literature & Composition (AP English IV)" />AP Literature & Composition (AP English IV)</label
+            >
+
+          </div>
+
+          <div id="apenglish4" class="content">
+            <p class="course">
+              Prerequisite: Recommended AP Language & Composition (English III)
+            </p>
+
+            <p class="course">Grade: 12</p>
+
+            <p class="course">Level: 4</p>
+          </div>
+
+          <div class="folder" onclick="toggleContent('ibenglish4')">
+            <label><input type="checkbox" name="items" value="IB English IV: IB Language & Literature A (HL)" />IB English IV: IB Language & Literature A (HL)</label
+            >
+            
+          </div>
+
+          <div id="ibenglish4" class="content">
+            <p class="course">Prerequisite: IB English III</p>
+
+            <p class="course">Grade: 12</p>
+
+            <p class="course">Level: 4</p>
+          </div>
+        </div>
+
+        <!--additional english courses-->
+
+        <div class="folder" onclick="toggleContent('addec')">
+          Additional English Courses
+        </div>
+
+        <div id="addec" class="content">
+          <div class="folder" onclick="toggleContent('red2esl')">
+          
+            <label><input type="checkbox" name="items" value="Reading II ESL" /> Reading II ESL</label
+            >
+          
+          </div>
+
+          <div id="red2esl" class="content">
+            <p class="course">
+              Prerequisite: Must be LPAC recommended based on EB Status
+            </p>
+
+            <p class="course">Grade: 10-12</p>
+
+            <p class="course">Level: 2</p>
+          </div>
+
+          <div class="folder" onclick="toggleContent('red3esl')">
+             <label><input type="checkbox" name="items" value="Reading III ESL" />Reading III ESL</label
+            >
+            
+          </div>
+
+          <div id="red3esl" class="content">
+            <p class="course">
+              Prerequisite: Must be LPAC recommended based on EB Status
+            </p>
+
+            <p class="course">Grade: 12</p>
+
+            <p class="course">Level: 2</p>
+          </div>
+        </div>
+      </div>
+      
+      
+      <div class="folder" onclick="toggleContent('science')">Science</div>
+
+      <div id="science" class="content">
+        <!--biology-->
+
+        <div class="folder" onclick="toggleContent('bio')">Biology</div>
+
+        <div id="bio" class="content">
+          <div class="folder" onclick="toggleContent('funcbio')">
+            <label><input type="checkbox" name="items" value="Functional Biology" />Functional Biology</label
+            >
+            
+          </div>
+
+          <div id="funcbio" class="content">
+            <p class="course">Prerequisite: ARD Committee Decision</p>
+
+            <p class="course">Grade: 9-12</p>
+
+            <p class="course">Level: 2</p>
+          </div>
+
+          <div class="folder" onclick="toggleContent('basicbio')">
+            <label><input type="checkbox" name="items" value="Basic Biology" />Basic Biology</label
+            >
+            
+          </div>
+
+          <div id="basicbio" class="content">
+            <p class="course">Prerequisite: ARD Committee Decision</p>
+
+            <p class="course">Grade: 9-12</p>
+
+            <p class="course">Level: 2</p>
+          </div>
+
+          <div class="folder" onclick="toggleContent('onlevelbio')">
+            <label><input type="checkbox" name="items" value="Biology" />Biology</label
+            >
+            
+          </div>
+
+          <div id="onlevelbio" class="content">
+            <p class="course">Prerequisite: None</p>
+
+            <p class="course">Grade: 9-12</p>
+
+            <p class="course">Level: 2</p>
+          </div>
+
+          <div class="folder" onclick="toggleContent('honorsbio')">
+             <label><input type="checkbox" name="items" value="Biology Honors" />Biology Honors</label
+            >
+           
+          </div>
+
+          <div id="honorsbio" class="content">
+            <p class="course">Prerequisite: None</p>
+
+            <p class="course">Grade: 9-12</p>
+
+            <p class="course">Level: 3</p>
+          </div>
+        </div>
+
+        <!--IPC-->
+
+        <div class="folder" onclick="toggleContent('IPC')">IPC</div>
+
+        <div id="IPC" class="content">
+          <div class="folder" onclick="toggleContent('Functionalipc')">
+             <label><input type="checkbox" name="items" value="Functional IPC" />Functional IPC</label
+            >
+         
+          </div>
+
+          <div id="Functionalipc" class="content">
+            <p class="course">Prerequisite: ARD Committee Decision</p>
+
+            <p class="course">Grade: 10-12</p>
+
+            <p class="course">Level: 2</p>
+          </div>
+
+          <div class="folder" onclick="toggleContent('basicIPC')">
+            <label><input type="checkbox" name="items" value="Basic IPC" />Basic IPC</label
+            >
+            
+          </div>
+
+          <div id="basicIPC" class="content">
+            <p class="course">Prerequisite: ARD Committee Decision</p>
+
+            <p class="course">Grade: 10-12</p>
+
+            <p class="course">Level: 2</p>
+          </div>
+
+        </div>
+
+        <!--chemistry-->
+
+        <div class="folder" onclick="toggleContent('chemistry')">
+          Chemistry
+        </div>
+
+        <div id="chemistry" class="content">
+          <div class="folder" onclick="toggleContent('onlevelchem')">
+            <label><input type="checkbox" name="items" value="Chemistry" /> Chemistry</label
+            >
+            
+          </div>
+
+          <div id="onlevelchem" class="content">
+            <p class="course">Prerequisite: Algebra I & Biology</p>
+
+            <p class="course">Grade: 10-12</p>
+
+            <p class="course">Level: 2</p>
+          </div>
+
+          <div class="folder" onclick="toggleContent('HonorsChemistry')">
+            <label><input type="checkbox" name="items" value="Honors Chemistry" /> Honors Chemistry</label
+            >
+            
+          </div>
+
+          <div id="HonorsChemistry" class="content">
+            <p class="course">Prerequisite: Algebra I & Biology</p>
+
+            <p class="course">Grade: 10-12</p>
+
+            <p class="course">Level: 3</p>
+          </div>
+          </div>
+          
+          <!--physics-->
+
+        <div class="folder" onclick="toggleContent('physics')">
+          Physics
+        </div>
+
+        <div id="physics" class="content">
+          <div class="folder" onclick="toggleContent('functionalphysics')">
+            <label><input type="checkbox" name="items" value="Functional Physics" /> Functional Physics</label
+            >
+
+          </div>
+
+          <div id="functionalphysics" class="content">
+            <p class="course">Prerequisite: ARD Commitee Decision</p>
+
+            <p class="course">Grade: 10-11</p>
+
+            <p class="course">Level: 2</p>
+          </div>
+
+          <div class="folder" onclick="toggleContent('Physics')">
+            Physics
+          </div>
+
+          <div id="Physics" class="content">
+            <p class="course">Prerequisite: Algebra I</p>
+
+            <p class="course">Grade: 10-11</p>
+
+            <p class="course">Level: 2</p>
+          </div>
+          
+           <div id="honorsphysics" class="content">
+            <p class="course">Prerequisite: Algebra I</p>
+
+            <p class="course">Grade: 10-12</p>
+
+            <p class="course">Level: 3</p>
+          </div>
+          
+          <div id="apphysicsI:algebrabased" class="content">
+            <p class="course">Prerequisite: Algebra II</p>
+
+            <p class="course">Grade: 10-12</p>
+
+            <p class="course">Level: 4</p>
+          </div>
+          </div>
+          
+           <!--Additional Science Courses-->
+         <div class="folder" onclick="toggleContent('additionalsciencecourses')">
+          Additional Science Courses
+        </div>
+
+        <div id="additionalsciencecourses" class="content">
+          <div class="folder" onclick="toggleContent('aquaticscience')">
+            <label><input type="checkbox" name="items" value="Aquatic Science" /> Aquatic Science</label
+            >
+            
+          </div>
+
+          <div id="aquaticscience" class="content">
+            <p class="course">Prerequisite: Recommeded Bioloy and completion or concurrent enrollment in Chemistry</p>
+
+            <p class="course">Grade: 10-12</p>
+
+            <p class="course">Level: 2</p>
+          </div>
+
+          <div class="folder" onclick="toggleContent('engineeringdesign&problemsolving')">
+            
+            <label><input type="checkbox" name="items" value="Engineering Design & Problem Solving" />Engineering Design & Problem Solving</label
+            >
+            
+          </div>
+
+          <div id="Engineering Design & Problem Solving" class="content">
+            <p class="course">Prerequisite: Geometry and 2 STEM pathway courses</p>
+
+            <p class="course">Grade: 11-12</p>
+
+            <p class="course">Level: 4</p>
+          </div>
+          
+          <div class="folder" onclick="toggleContent('Pathophysiology')">
+ <label><input type="checkbox" name="items" value="Pathophysiology" />Pathophysiology</label
+            >
+
+
+          </div>
+          
+           <div id="Pathophysiology" class="content">
+            <p class="course">Prerequisite: Biology, Chemistry, and completion of 2 Health Science courses or Medterm</p>
+
+            <p class="course">Grade: 11-12</p>
+
+            <p class="course">Level: 4</p>
+          </div>
+          
+          <div class="folder" onclick="toggleContent('medicalmicrobiology')">
+             <label><input type="checkbox" name="items" value="Medical Microbiology" />Medical Microbiology</label
+            >
+            
+          </div>
+          
+          <div id="medicalmicrobiology" class="content">
+            <p class="course">Prerequisite: Biology, Chemistry, and 1 Health Science course</p>
+
+            <p class="course">Grade: 10-12</p>
+
+            <p class="course">Level: 3</p>
+          </div>
+          
+          <div class="folder" onclick="toggleContent('earthsystemsscience')">
+            <label><input type="checkbox" name="items" value="Earth Systems Science" />Earth Systems Science</label
+            >
+            
+          </div>
+          
+          <div id="earthsystemsscience" class="content">
+            <p class="course">Prerequisite: Algebra I and 2 credits of Highschool science</p>
+
+            <p class="course">Grade: 11-12</p>
+
+            <p class="course">Level: 2</p>
+          </div>
+          
+          <div class="folder" onclick="toggleContent('basicearthsystemsscience')">
+            <label><input type="checkbox" name="items" value="Basic Earth Systems Science" />Basic Earth Systems Science</label
+            >
+            
+          </div>
+          
+          <div id="basicearthsystemsscience" class="content">
+            <p class="course">Prerequisite: Algebra I and 2 credits of Highschool science</p>
+
+            <p class="course">Grade: 11-12</p>
+
+            <p class="course">Level: 2</p>
+          </div>
+          
+          <div class="folder" onclick="toggleContent('honorsastronomy')">
+            <label><input type="checkbox" name="items" value="Honors Astronomy" />Honors Astronomy</label
+            >
+            
+          </div>
+          
+          <div id="honorsastronomy" class="content">
+            <p class="course">Biology, Chemistry, and Geometry</p>
+
+            <p class="course">Grade: 11-12</p>
+
+            <p class="course">Level: 3</p>
+          </div>
+          
+          <div class="folder" onclick="toggleContent('honorsforensicscience')">
+                        <label><input type="checkbox" name="items" value="Honors Forensic Science" />Honors Forensic Science</label
+            >
+            
+          </div>
+          
+           <div id="honorsforensicscience" class="content">
+            <p class="course">Prerequisite: Biology and Chemistry</p>
+
+            <p class="course">Grade: 11-12</p>
+
+            <p class="course">Level: 3</p>
+          </div>
+          
+          <div class="folder" onclick="toggleContent('honorsanatomyandphysiology')">
+            <label><input type="checkbox" name="items" value="Honors Anatomy & Physiology" />Honors Anatomy & Physiology</label
+            >
+            
+          </div>
+          
+          <div id="honorsanatomyandphysiology" class="content">
+            <p class="course">Prerequisite: Biology and a 2nd science credit</p>
+
+            <p class="course">Grade: 11-12</p>
+
+            <p class="course">Level: 3</p>
+          </div>
+          
+          <div class="folder" onclick="toggleContent('scienceap')">AP Courses</div>
+
+          <div id="scienceap" class="content">
+            <div class="folder" onclick="toggleContent('apbio')">
+              <label><input type="checkbox" name="items" value="AP Biology" />AP Biology</label
+            >
+              
+            </div>
+            
+            <div id="apbio" class="content">
+              <p class="course">Prerequisite: Biology & Chemistry</p>
+
+              <p class="course">Grade: 10-12</p>
+
+              <p class="course">Level: 4</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('apchem')">
+                           <label><input type="checkbox" name="items" value="AP Chemistry" />AP Chemistry</label
+            >
+              
+            </div>
+            
+            <div id="apchem" class="content">
+              <p class="course">Prerequisite: Chemistry & Algebra II</p>
+
+              <p class="course">Grade: 11-12</p>
+
+              <p class="course">Level: 4</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('apphys2')">
+              <label><input type="checkbox" name="items" value="AP Physics II: Algebra Based" />AP Physics II: Algebra Based</label
+            >
+              
+            </div>
+            
+            <div id="apphys2" class="content">
+              <p class="course">Prerequisite: AP Physics I or a comparable Physics introductory Recommended Pre/Co-Requisite: Pre-Calculus</p>
+
+              <p class="course">Grade: 11-12</p>
+
+              <p class="course">Level: 4</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('apphysc')">
+<label><input type="checkbox" name="items" value="AP Physics C: Mechanics & Electricity and Magnetism" />AP Physics C: Mechanics & Electricity and Magnetism</label
+            >
+
+            </div>
+            
+            <div id="apphysc" class="content">
+              <p class="course">Prerequisite: Concurrent or prior enrollment in Calculus</p>
+
+              <p class="course">Grade: 10-12</p>
+
+              <p class="course">Level: 4</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('apenvisci')">
+             <label><input type="checkbox" name="items" value="AP Environmental Science" />AP Environmental Science</label
+            >
+             
+            </div>
+            
+            <div id="apenvisci" class="content">
+              <p class="course">Prerequisite: Two years of laboratory science - one year of life science and one year of physical science (Biology and Chemistry or Physics), Algebra 1</p>
+
+              <p class="course">Grade: 10-12</p>
+
+              <p class="course">Level: 4</p>
+            </div>
+            </div>
+          
+          
+          <div class="folder" onclick="toggleContent('scienceib')">IB Courses</div>
+
+          <div id="scienceib" class="content">
+          <div class="folder" onclick="toggleContent('ibbiologyI')">
+          <label><input type="checkbox" name="items" value="IB Biology I" />IB Biology I</label
+            >
+                      </div>
+          
+           <div id="ibbiologyI" class="content">
+            <p class="course">Prerequisite: Completion of a proceeding advanced natural science </p>
+
+            <p class="course">Grade: 11</p>
+
+            <p class="course">Level: 4</p>
+          </div>
+          
+          <div class="folder" onclick="toggleContent('ibbiologyII')">
+            <label><input type="checkbox" name="items" value="IB Biology II" />IB Biology II</label
+            >
+            
+          </div>
+          
+           <div id="ibbiologyII" class="content">
+            <p class="course">Prerequisite: IB Biology I </p>
+
+            <p class="course">Grade: 12</p>
+
+            <p class="course">Level: 4</p>
+          </div>
+          
+          <div class="folder" onclick="toggleContent('ibchemistryI')">
+            <label><input type="checkbox" name="items" value="IB Chemistry I" />IB Chemistry I</label
+            >
+            
+          </div>
+          
+           <div id="ibchemistryI" class="content">
+            <p class="course">Prerequisite: Completion of 2 years of Highschool Math and Science: Recommended is Chemistry </p>
+
+            <p class="course">Grade: 11</p>
+
+            <p class="course">Level: 4</p>
+          </div>
+          
+          <div class="folder" onclick="toggleContent('ibchemistryII')">
+            
+            <label><input type="checkbox" name="items" value="IB Chemistry II" />IB Chemistry II</label
+            >
+            
+          </div>
+          
+           <div id="ibchemistryII" class="content">
+            <p class="course">Prerequisite: IB Chmemistry I</p>
+
+            <p class="course">Grade: 12</p>
+
+            <p class="course">Level: 4</p>
+          </div>
+          
+          <div class="folder" onclick="toggleContent('ibphysics')">
+            <label><input type="checkbox" name="items" value="IB Physics" />IB Physics</label
+            >
+            
+          </div>
+          
+           <div id="ibphysics" class="content">
+            <p class="course">Prerequisite: Completion of Algebra II and completion of proceeding advanced physical science course</p>
+
+            <p class="course">Grade: 11</p>
+
+            <p class="course">Level: 4</p>
+            </div>
+          </div>
+          </div>
+        </div>
+        
+      <!--social studies-->
+      <div class="folder" onclick="toggleContent('ss')">Social Studies</div>
+
+      <div id="ss" class="content">
+      
+      <div class="folder" onclick="toggleContent('worldgeo')">World Geography</div>
+
+        <div id="worldgeo" class="content">
+          <div class="folder" onclick="toggleContent('funcworldgeo')">
+            <label><input type="checkbox" name="items" value="Functional World Geography" />Functional World Geography</label
+            >
+            
+          </div>
+          
+          <div id="funcworldgeo" class="content">
+            <p class="course">Prerequisite: ARD Commitee Decision</p>
+
+            <p class="course">Grade: 9</p>
+
+            <p class="course">Level: 2</p>
+          </div>
+          
+          <div class="folder" onclick="toggleContent('basicworldgeo')">
+            <label><input type="checkbox" name="items" value="Basic World Geography" />Basic World Geography</label
+            >
+            
+          </div>
+          
+          <div id="basicworldgeo" class="content">
+            <p class="course">Prerequisite: ARD Commitee Decision</p>
+
+            <p class="course">Grade: 9</p>
+
+            <p class="course">Level: 2</p>
+          </div>
+          
+          <div class="folder" onclick="toggleContent('onlevelworldgeo')">
+             <label><input type="checkbox" name="items" value="World Geography" />World Geography</label
+            >
+            
+          </div>
+          
+          <div id="onlevelworldgeo" class="content">
+            <p class="course">Prerequisite: None</p>
+
+            <p class="course">Grade: 9</p>
+          </div>
+          
+          <div class="folder" onclick="toggleContent('aphumangeo')">
+            
+             <label><input type="checkbox" name="items" value="AP Human Geography" />AP Human Geography</label
+            >
+            
+          </div>
+          
+          <div id="aphumangeo" class="content">
+            <p class="course">Prerequisite: None</p>
+
+            <p class="course">Grade: 9</p>
+          </div>
+        </div>
+        
+        
+        <div class="folder" onclick="toggleContent('worldhistory')">World History</div>
+
+        <div id="worldhistory" class="content">
+          <div class="folder" onclick="toggleContent('funcworldhistory')">
+             <label><input type="checkbox" name="items" value="Functional World History" />Functional World History</label
+            >
+            
+          </div>
+          
+          <div id="funcworldhistory" class="content">
+            <p class="course">Prerequisite: ARD Commitee Decision</p>
+
+            <p class="course">Grade: 10-12</p>
+
+            <p class="course">Level: 2</p>
+          </div>
+          
+          <div class="folder" onclick="toggleContent('basicworldhistory')">
+            <label><input type="checkbox" name="items" value="Basic World History" />Basic World History</label
+            >
+            
+          </div>
+          
+          <div id="basicworldhistory" class="content">
+            <p class="course">Prerequisite: ARD Commitee Decision</p>
+
+            <p class="course">Grade: 10-12</p>
+
+            <p class="course">Level: 2</p>
+          </div>
+          
+          <div class="folder" onclick="toggleContent('onlevelworldhistory')">
+             <label><input type="checkbox" name="items" value="World History Studies" />World History Studies</label
+            >
+            
+          </div>
+          
+          <div id="onlevelworldhistory" class="content">
+            <p class="course">Prerequisite: None</p>
+
+            <p class="course">Grade: 10-12</p>
+            
+            <p class="course">Level: 2</p>
+          </div>
+          
+          <div class="folder" onclick="toggleContent('aphumanhistory')">
+            <label><input type="checkbox" name="items" value="AP World History Studies" />AP World History Studies</label
+            >
+            
+          </div>
+          
+          <div id="aphumanhistory" class="content">
+            <p class="course">Prerequisite: None</p>
+
+            <p class="course">Grade: 10-12</p>
+            
+            <p class="course">Level: 4</p>
+          </div>
+        </div>
+        
+        
+        <div class="folder" onclick="toggleContent('ushistory')">US History</div>
+
+        <div id="ushistory" class="content">
+          <div class="folder" onclick="toggleContent('funcushistory')">
+            <label><input type="checkbox" name="items" value="Functional US History" />Functional US History</label
+            >
+            
+          </div>
+          
+          <div id="funcushistory" class="content">
+            <p class="course">Prerequisite: ARD Commitee Decision</p>
+
+            <p class="course">Grade: 10-12</p>
+
+            <p class="course">Level: 2</p>
+          </div>
+          
+          <div class="folder" onclick="toggleContent('basicushistory')">
+            <label><input type="checkbox" name="items" value="Basic U.S History Studies Since Reconstruction" />Basic U.S History Studies Since Reconstruction</label
+            >
+            
+          </div>
+          
+          <div id="basicushistory" class="content">
+            <p class="course">Prerequisite: ARD Commitee Decision</p>
+
+            <p class="course">Grade: 10-12</p>
+
+            <p class="course">Level: 2</p>
+          </div>
+          
+          <div class="folder" onclick="toggleContent('onlevelushistory')">
+            <label><input type="checkbox" name="items" value="U.S History Studies Since Reconstruction" />U.S History Studies Since Reconstruction</label
+            >
+            
+          </div>
+          
+          <div id="onlevelushistory" class="content">
+            <p class="course">Prerequisite: None</p>
+
+            <p class="course">Grade: 11</p>
+            
+            <p class="course">Level: 2</p>
+          </div>
+          
+          <div class="folder" onclick="toggleContent('apushistory')">
+            <label><input type="checkbox" name="items" value="AP United States History" />AP United States History</label
+            >
+            
+          </div>
+          
+          <div id="apushistory" class="content">
+            <p class="course">Prerequisite: There are no prerequisites for AP US History. Students should be able to read a college-level textbook and write grammatically correct, complete sentences</p>
+
+            <p class="course">Grade: 11</p>
+            
+            <p class="course">Level: 4</p>
+          </div>
+          
+          <div class="folder" onclick="toggleContent('ibushistory')">
+                        <label><input type="checkbox" name="items" value="IB History of the Americas I (HOA I)" />IB History of the Americas I (HOA I)</label
+            >
+            
+          </div>
+          
+          <div id="ibushistory" class="content">
+            <p class="course">Prerequisite: Completion of an advanced World Geography or World History course</p>
+
+            <p class="course">Grade: 11</p>
+            
+            <p class="course">Level: 4</p>
+          </div>
+        </div>
+       
+       
+       <div class="folder" onclick="toggleContent('gov')">Government</div>
+
+        <div id="gov" class="content">
+          <div class="folder" onclick="toggleContent('funcgov')">
+<label><input type="checkbox" name="items" value="Functional Government" />Functional Government</label
+            >
+
+          </div>
+          
+          <div id="funcgov" class="content">
+            <p class="course">Prerequisite: ARD Commitee Decision</p>
+
+            <p class="course">Grade: 12</p>
+
+            <p class="course">Level: 2</p>
+            
+            <p class="course">Credit: 0.5</p>
+          </div>
+          
+          <div class="folder" onclick="toggleContent('basicgov')">
+<label><input type="checkbox" name="items" value="Basic Government" />Basic Government</label
+            >
+
+          </di
+            <p class="course">Credit: 0.5</p>
+          </div>
+          
+          <div class="folder" onclick="toggleContent('onlevelgov')">
+<label><input type="checkbox" name="items" value="Government" />Government</label
+            >
+
+          </div>
+          
+          <div id="onlevelgov" class="content">
+            <p class="course">Prerequisite: None</p>
+
+            <p class="course">Grade: 11-12</p>
+            
+            <p class="course">Level: 2</p>
+            
+            <p class="course">Credit: 0.5</p>
+          </div>
+          
+          <div class="folder" onclick="toggleContent('apusgov')">
+<label><input type="checkbox" name="items" value="AP U.S Government" />AP U.S Government</label
+            >
+
+          </div>
+          
+          <div id="apusgov" class="content">
+            <p class="course">Prerequisite: There are no prerequisites for AP US Government or AP Macroeconomics. Students should be able to read a college-level textbook and write grammatically correct, complete sentences.</p>
+
+            <p class="course">Grade: 11-12</p>
+            
+            <p class="course">Level: 4</p>
+            
+            <p class="course">Credit: 0.5</p>
+          </div>
+          </div>
+          
+          
+          <div class="folder" onclick="toggleContent('eco')">Economics</div>
+
+        <div id="eco" class="content">
+          <div class="folder" onclick="toggleContent('funceco')">
+<label><input type="checkbox" name="items" value="Functional Economics" />Functional Economics</label
+            >
+
+
+          </div>
+          
+          <div id="funceco" class="content">
+            <p class="course">Prerequisite: ARD Commitee Decision</p>
+
+            <p class="course">Grade: 12</p>
+
+            <p class="course">Level: 2</p>
+            
+            <p class="course">Credit: 0.5</p>
+          </div>
+          
+          <div class="folder" onclick="toggleContent('basiceco')">
+            <label><input type="checkbox" name="items" value="Basic Economics" />Basic Economics</label
+            >
+            
+          </div>
+          
+          <div id="basiceco" class="content">
+            <p class="course">Prerequisite: ARD Commitee Decision</p>
+
+            <p class="course">Grade: 12</p>
+
+            <p class="course">Level: 2</p>
+            
+            <p class="course">Credit: 0.5</p>
+          </div>
+          
+          <div class="folder" onclick="toggleContent('onleveleco')">
+            <label><input type="checkbox" name="items" value="Economics - Free Enterprise" />Economics - Free Enterprise</label
+            >
+            
+          </div>
+          
+          <div id="onlevelgov" class="content">
+            <p class="course">Prerequisite: None</p>
+
+            <p class="course">Grade: 12</p>
+            
+            <p class="course">Level: 2</p>
+            
+            <p class="course">Credit: 0.5</p>
+          </div>
+          
+          <div class="folder" onclick="toggleContent('apmacroeco')">
+            <label><input type="checkbox" name="items" value="AP Macroeconomics" />AP Macroeconomics</label
+            >
+            
+          </div>
+          
+          <div id="apmacroeco" class="content">
+            <p class="course">Prerequisite: There are no prerequisites for AP US Government or AP Macroeconomics. Students should be able to read a college-level textbook and write grammatically correct, complete sentences.</p>
+
+            <p class="course">Grade: 11-12</p>
+            
+            <p class="course">Level: 4</p>
+            
+            <p class="course">Credit: 0.5</p>
+          </div>
+          
+          <div class="folder" onclick="toggleContent('ibeco1')">
+            <label><input type="checkbox" name="items" value="IB Economics I" />IB Economics I</label
+            >
+            
+          </div>
+          
+          <div id="ibeco1" class="content">
+            <p class="course">Prerequisite: None</p>
+
+            <p class="course">Grade: 11-12</p>
+            
+            <p class="course">Level: 4</p>
+          </div>
+          
+          <div class="folder" onclick="toggleContent('ibeco2')">
+            <label><input type="checkbox" name="items" value="IB Economics II" />IB Economics II</label
+            >
+            
+          </div>
+          
+          <div id="apmacroeco" class="content">
+            <p class="course">Prerequisite: None</p>
+
+            <p class="course">Grade: 12</p>
+            
+            <p class="course">Level: 4</p>
+          </div>
+          </div>
+          
+        <div class="folder" onclick="toggleContent('goveco')">Government & Economics</div>
+
+        <div id="goveco" class="content">
+          <div class="folder" onclick="toggleContent('onlevelgoveco')">
+            <label><input type="checkbox" name="items" value="Government/Economics" />Government/Economics</label
+            >
+            
+          </div>
+          
+          <div id="onlevelgoveco" class="content">
+            <p class="course">Prerequisite: None</p>
+
+            <p class="course">Grade: 11-12</p>
+
+            <p class="course">Level: 2</p>
+          </div>
+          
+          <div class="folder" onclick="toggleContent('apgoveco')">
+            <label><input type="checkbox" name="items" value="AP U.S Government/ AP Macroeconomics" />AP U.S Government/ AP Macroeconomics</label>
+            
+          </div>
+          
+          <div id="apgoveco" class="content">
+            <p class="course">Prerequisite: Recommended Prerequisite or Corequisite: AP US History</p>
+
+            <p class="course">Grade: 11-12</p>
+
+            <p class="course">Level: 4</p>
+          </div>
+        </div>
+        
+        <div class="folder" onclick="toggleContent('addsscourses')">Additional Social Studies Courses</div>
+        
+        <div id="addsscourses" class="content">
+          <div class="folder" onclick="toggleContent('phyc/socio')">
+            <label><input type="checkbox" name="items" value="Psychology/Sociology" />Psychology/Sociology</label>
+          </div>
+          
+          <div id="phyc/socio" class="content">
+            <p class="course">Prerequisite: None</p>
+
+            <p class="course">Grade: 10-12</p>
+
+            <p class="course">Level: 2</p>
+          </div>
+          
+          <div class="folder" onclick="toggleContent('aahistory')">
+              <label><input type="checkbox" name="items" value="Honors Ethnic Studies: African American History" />Honors Ethnic Studies: African American History</label>
+            </div>
+            
+            <div id="aahistory" class="content">
+              <p class="course">Prerequisite: None</p>
+
+              <p class="course">Grade: 10-12</p>
+
+              <p class="course">Level: 3</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('mahistory')">
+              <label><input type="checkbox" name="items" value="Honors Ethnic Studies: Mexican American History" />Honors Ethnic Studies: Mexican American History</label>
+            </div>
+            
+            <div id="mahistory" class="content">
+              <p class="course">Prerequisite: None</p>
+
+              <p class="course">Grade: 10-12</p>
+
+              <p class="course">Level: 3</p>
+            </div>
+          
+          
+          <div class="folder" onclick="toggleContent('ssap')">AP Courses</div>
+
+          <div id="ssap" class="content">
+            <div class="folder" onclick="toggleContent('apcompgov')">
+              <label><input type="checkbox" name="items" value="AP Comparative Government" />AP Comparative Government</label>
+            </div>
+            
+            <div id="apcompgov" class="content">
+              <p class="course">Prerequisite: None</p>
+
+              <p class="course">Grade: 11-12</p>
+
+              <p class="course">Level: 4</p>
+              
+              <p class="course">Credit: 0.5</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('apmicroeco')">
+              <label><input type="checkbox" name="items" value="AP Microeconomics" />AP Microeconomics</label>
+            </div>
+            
+            <div id="apmicroeco" class="content">
+              <p class="course">Prerequisite: Recommended: AP Macroeconomics</p>
+
+              <p class="course">Grade: 11-12</p>
+
+              <p class="course">Level: 4</p>
+              
+              <p class="course">Credit: 0.5</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('appsyc')">
+              <label><input type="checkbox" name="items" value="AP Psychology/Social Studies Research Methods" />AP Psychology/Social Studies Research Methods</label>
+            </div>
+            
+            <div id="appsyc" class="content">
+              <p class="course">Prerequisite: None</p>
+
+              <p class="course">Grade: 10-12</p>
+
+              <p class="course">Level: 4 (First Semester) Level: 3 (Second Semester)</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('apeurohistory')">
+              <label><input type="checkbox" name="items" value="AP European History" />AP European History</label>
+            </div>
+            
+            <div id="apeurohistory" class="content">
+              <p class="course">Prerequisite: Previous AP Social Studies Course</p>
+
+              <p class="course">Grade: 10-12</p>
+
+              <p class="course">Level: 4</p>
+            </div>
+          </div>
+            
+            <div class="folder" onclick="toggleContent('ssib')">IB Courses</div>
+
+          <div id="ssib" class="content">
+            <div class="folder" onclick="toggleContent('ibamericahistory2')">
+              <label><input type="checkbox" name="items" value="IB History of the Americas II (HOA II)" />IB History of the Americas II (HOA II)</label>
+            </div>
+            
+            <div id="ibamericahistory2" class="content">
+              <p class="course">Prerequisite: IB History of the Americas I</p>
+
+              <p class="course">Grade: 12</p>
+
+              <p class="course">Level: 4</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('ibpsyc')">
+              <label><input type="checkbox" name="items" value="IB Psychology" />IB Psychology</label>
+            </div>
+            
+            <div id="ibpsyc" class="content">
+              <p class="course">Prerequisite: completion of a prior advanced science or social studies course</p>
+
+              <p class="course">Grade: 11-12</p>
+
+              <p class="course">Level: 4</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('ibtok1')">
+              <label><input type="checkbox" name="items" value="IB Theory of Knowledge I" />IB Theory of Knowledge I</label>
+            </div>
+            
+            <div id="ibtok1" class="content">
+              <p class="course">Prerequisite: Required IB Diploma Program</p>
+
+              <p class="course">Grade: 11</p>
+
+              <p class="course">Level: 4</p>
+              
+              <p class="course">Credit: 0.5</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('ibtok2')">
+              <label><input type="checkbox" name="items" value="IB Theory of Knowledge II" />IB Theory of Knowledge II</label>
+            </div>
+            
+            <div id="ibtok2" class="content">
+              <p class="course">Prerequisite: Required IB Diploma Program</p>
+
+              <p class="course">Grade: 12</p>
+
+              <p class="course">Level: 4</p>
+              
+              <p class="course">Credit: 0.5</p>
+            </div>
+            </div>
+        </div>
+       </div>
+          
+        
+        <div class="folder" onclick="toggleContent('electives')">Electives</div>
+
+      <div id="electives" class="content">
+        <!--language-->
+
+        <div class="folder" onclick="toggleContent('language')">Foreign Language</div>
+        <div id="language" class="content">
+        
+        <!--spanish-->
+        <div class="folder" onclick="toggleContent('spanish')">Spanish</div>
+
+          <div id="spanish" class="content">
+            <div class="folder" onclick="toggleContent('spanish1')">
+              <label><input type="checkbox" name="items" value="Spanish 1" /> Spanish 1</label>
+            </div>
+            
+            <div id="spanish1" class="content">
+              <p class="course">Prerequisite: None</p>
+
+              <p class="course">Grade: 10-11</p>
+
+              <p class="course">Level: 2</p>
+            </div>
+            
+
+            <div class="folder" onclick="toggleContent('spanish2')">
+              <label><input type="checkbox" name="items" value="Spanish II" /> Spanish II</label>
+            </div>
+            
+            <div id="spanish2" class="content">
+              <p class="course">Prerequisite: Spanish I</p>
+
+              <p class="course">Grade: 10-12</p>
+
+              <p class="course">Level: 2</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('honorsspanish2')">
+              <label><input type="checkbox" name="items" value="Honors Spanish II" /> Honors Spanish II</label>
+            </div>
+            
+            <div id="honorsspanish2" class="content">
+              <p class="course">Prerequisite: Spanish I or Honors Spanish I</p>
+
+              <p class="course">Grade: 10-12</p>
+
+              <p class="course">Level: 3</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('honorsspanish3')">
+              <label><input type="checkbox" name="items" value="Honors Spanish III" />Honors Spanish III</label>
+            </div>
+            
+            <div id="honorsspanish3" class="content">
+              <p class="course">Prerequisite: Spanish II or Honors Spanish II</p>
+
+              <p class="course">Grade: 10-12</p>
+
+              <p class="course">Level: 3</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('spanish4conv')">
+              <label><input type="checkbox" name="items" value="Spanish IV - Coversational" />Spanish IV - Coversational</label>
+            </div>
+            
+            <div id="spanish4conv" class="content">
+              <p class="course">Prerequisite: Honors Spanish III</p>
+
+              <p class="course">Grade: 10-12</p>
+
+              <p class="course">Level: 3</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('apspanish4')">
+              <label><input type="checkbox" name="items" value="AP Spanish IV Language & Culture" />AP Spanish IV Language & Culture</label>
+            </div>
+            
+            <div id="apspanish4" class="content">
+              <p class="course">Prerequisite: Recommended Honors Spanish III</p>
+
+              <p class="course">Grade: 10-12</p>
+
+              <p class="course">Level: 4</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('apspanish5')">
+              <label><input type="checkbox" name="items" value="AP Spanish V Literature & Culture" />AP Spanish V Literature & Culture</label>
+            </div>
+            
+            <div id="apspanish5" class="content">
+              <p class="course">Prerequisite: Recommended Spanish IV Language & Culture</p>
+
+              <p class="course">Grade: 10-12</p>
+
+              <p class="course">Level: 4</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('ibspanish1')">
+              <label><input type="checkbox" name="items" value="IB Spanish ab Initio I" />IB Spanish ab Initio I</label>
+            </div>
+            
+            <div id="ibspanish1" class="content">
+              <p class="course">Prerequisite: None</p>
+
+              <p class="course">Grade: 11</p>
+
+              <p class="course">Level: 3</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('ibspanish2')">
+              <label><input type="checkbox" name="items" value="IB Spanish ab Initio II" />IB Spanish ab Initio II</label>
+            </div>
+            
+            <div id="ibspanish2" class="content">
+              <p class="course">Prerequisite: None</p>
+
+              <p class="course">Grade: 12</p>
+
+              <p class="course">Level: 3</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('spanish6')">
+              <label><input type="checkbox" name="items" value="Honors Spanish VI" />Honors Spanish VI</label>
+            </div>
+            
+            <div id="spanish6" class="content">
+              <p class="course">Prerequisite: DLI Program and/or Spanish V</p>
+
+              <p class="course">Grade: 11-12</p>
+
+              <p class="course">Level: 3</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('spanish7')">
+              <label><input type="checkbox" name="items" value="Honors Spanish VII" />Honors Spanish VII</label>
+            </div>
+            
+            <div id="spanish7" class="content">
+              <p class="course">Prerequisite: Honors Spanish VI</p>
+
+              <p class="course">Grade: 12</p>
+
+              <p class="course">Level: 3</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('ibspanish4')">
+              <label><input type="checkbox" name="items" value="IB Spanish IV" />IB Spanish IV</label>
+            </div>
+            
+            <div id="ibspanish4" class="content">
+              <p class="course">Prerequisite: Completion of Spanish II or teacher approval</p>
+
+              <p class="course">Grade: 11</p>
+
+              <p class="course">Level: 4</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('ibspanish5')">
+              <label><input type="checkbox" name="items" value="IB Spanish V" />IB Spanish V</label>
+            </div>
+            
+            <div id="ibspanish5" class="content">
+              <p class="course">Prerequisite: IB Spanish IV</p>
+
+              <p class="course">Grade: 12</p>
+
+              <p class="course">Level: 4</p>
+            </div>
+            </div>
+            
+            <!--french-->
+        <div class="folder" onclick="toggleContent('french')">French</div>
+
+          <div id="french" class="content">
+            <div class="folder" onclick="toggleContent('french1')">
+              <label><input type="checkbox" name="items" value="French I" />French I</label>
+            </div>
+            
+            <div id="french1" class="content">
+              <p class="course">Prerequisite: None</p>
+
+              <p class="course">Grade: 9</p>
+
+              <p class="course">Level: 2</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('honorsfrench1')">
+              <label><input type="checkbox" name="items" value="Honors French I" />Honors French I</label>
+            </div>
+            
+            <div id="honorsfrench1" class="content">
+              <p class="course">Prerequisite: None</p>
+
+              <p class="course">Grade: 9-11</p>
+
+              <p class="course">Level: 3</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('honorsfrench2')">
+              <label><input type="checkbox" name="items" value="Honors French II" />Honors French II</label>
+            </div>
+            
+            <div id="honorsfrench2" class="content">
+              <p class="course">Prerequisite: French I</p>
+
+              <p class="course">Grade: 10-11</p>
+
+              <p class="course">Level: 3</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('honorsfrench3')">
+              <label><input type="checkbox" name="items" value="Honors French III" />Honors French III</label>
+            </div>
+            
+            <div id="honorsfrench3" class="content">
+              <p class="course">Prerequisite: French II</p>
+
+              <p class="course">Grade: 10-12</p>
+
+              <p class="course">Level: 3</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('apfrench4')">
+              <label><input type="checkbox" name="items" value="AP French IV Language & Culture" />AP French IV Language & Culture</label>
+            </div>
+            
+            <div id="apfrench4" class="content">
+              <p class="course">Prerequisite: Recommended Honors French III</p>
+
+              <p class="course">Grade: 10-12</p>
+
+              <p class="course">Level: 4</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('ibfrench1')">
+              <label><input type="checkbox" name="items" value="IB French ab Initio I" />IB French ab Initio I</label>
+            </div>
+            
+            <div id="ibfrench1" class="content">
+              <p class="course">Prerequisite: None</p>
+
+              <p class="course">Grade: 11</p>
+
+              <p class="course">Level: 3</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('ibfrench2')">
+              <label><input type="checkbox" name="items" value="IB French ab Initio II" />IB French ab Initio II</label>
+            </div>
+            
+            <div id="ibfrench2" class="content">
+              <p class="course">Prerequisite: IB French ab Initio I</p>
+
+              <p class="course">Grade: 12</p>
+
+              <p class="course">Level: 3</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('ibfrench4')">
+              <label><input type="checkbox" name="items" value="IB French IV" />IB French IV</label>
+            </div>
+            
+            <div id="ibfrench4" class="content">
+              <p class="course">Prerequisite: Completion of French II or teacher approval</p>
+
+              <p class="course">Grade: 11</p>
+
+              <p class="course">Level: 4</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('ibfrench5')">
+              <label><input type="checkbox" name="items" value="IB French V" />IB French V</label>
+            </div>
+            
+            <div id="ibfrench5" class="content">
+              <p class="course">Prerequisite: IB French IV</p>
+
+              <p class="course">Grade: 12</p>
+
+              <p class="course">Level: 4</p>
+            </div>
+            </div>
+            
+            <!--ASL-->
+        <div class="folder" onclick="toggleContent('asl')">American Sign Language</div>
+
+          <div id="asl" class="content">
+            <div class="folder" onclick="toggleContent('asl1')">
+              <label><input type="checkbox" name="items" value="American Sign Language I" />American Sign Language I</label>
+            </div>
+            
+            <div id="asl1" class="content">
+              <p class="course">Prerequisite: None</p>
+
+              <p class="course">Grade: 9-11</p>
+
+              <p class="course">Level: 2</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('asl2')">
+              <label><input type="checkbox" name="items" value="American Sign Language II" />American Sign Language II</label>
+            </div>
+            
+            <div id="asl2" class="content">
+              <p class="course">Prerequisite: American Sign Language I</p>
+
+              <p class="course">Grade: 10-12</p>
+
+              <p class="course">Level: 2</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('asl3')">
+              <label><input type="checkbox" name="items" value="Honors American Sign Language III" />Honors American Sign Language III</label>
+            </div>
+            
+            <div id="asl3" class="content">
+              <p class="course">Prerequisite: American Sign Language II</p>
+
+              <p class="course">Grade: 10-12</p>
+
+              <p class="course">Level: 3</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('asl4')">
+              <label><input type="checkbox" name="items" value="Honors American Sign Language IV" />Honors American Sign Language IV</label>
+            </div>
+            
+            <div id="asl4" class="content">
+              <p class="course">Prerequisite: American SIgn Language III</p>
+
+              <p class="course">Grade: 10-12</p>
+
+              <p class="course">Level: 3</p>
+            </div>
+            </div>
+            
+            <!--chinese-->
+        <div class="folder" onclick="toggleContent('chinese')">Chinese</div>
+
+          <div id="chinese" class="content">
+            <div class="folder" onclick="toggleContent('chinese1')">
+              <label><input type="checkbox" name="items" value="Honors Chinese I" />Honors Chinese I</label>
+            </div>
+            
+            <div id="chinese1" class="content">
+              <p class="course">Prerequisite: None</p>
+
+              <p class="course">Grade: 9-11</p>
+
+              <p class="course">Level: 3</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('chinese2')">
+              <label><input type="checkbox" name="items" value="Honors Chinese II" />Honors Chinese II</label>
+            </div>
+            
+            <div id="chinese2" class="content">
+              <p class="course">Prerequisite: Honors Chinese I</p>
+
+              <p class="course">Grade: 10-12</p>
+
+              <p class="course">Level: 3</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('chinese3')">
+              <label><input type="checkbox" name="items" value="Honors Chinese III" />Honors Chinese III</label>
+            </div>
+            
+            <div id="chinese3" class="content">
+              <p class="course">Prerequisite: Honors Chinese II</p>
+
+              <p class="course">Grade: 10-12</p>
+
+              <p class="course">Level: 3</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('chinese4')">
+              <label><input type="checkbox" name="items" value="AP Chinese Language & Culture (Chinese IV)" />AP Chinese Language & Culture (Chinese IV)</label>
+            </div>
+            
+            <div id="chinese4" class="content">
+              <p class="course">Prerequisite: There are no prerequisite courses; however, students are typically in their fourth year of high school–level study. In the case of native or heritage speakers, there may be a different pathway of study leading to this course</p>
+
+              <p class="course">Grade: 10-12</p>
+
+              <p class="course">Level: 4</p>
+            </div>
+            </div>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('peathletics')">PE & Athletics</div>
+        <div id="peathletics" class="content">
+        
+        <!--pe-->
+        <div class="folder" onclick="toggleContent('pe')">PE</div>
+
+          <div id="pe" class="content">
+            <div class="folder" onclick="toggleContent('lifeoutdoor')">
+              <label><input type="checkbox" name="items" value="Lifetime Recreation and Outdoor Pursuits" /> Lifetime Recreation and Outdoor Pursuits</label>
+            </div>
+            
+            <div id="lifeoutdoor" class="content">
+              <p class="course">Grade: 10-12</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('aclifewellness')">
+              <label><input type="checkbox" name="items" value="AC Lifetime Fitness and Wellness Pursuits" /> AC Lifetime Fitness and Wellness Pursuits</label>
+            </div>
+            
+            <div id="aclifewellness" class="content">
+              <p class="course">Grade: 10-12</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('lifewellness')">
+              <label><input type="checkbox" name="items" value="Lifetime Fitness and Wellness Pursuits" />Lifetime Fitness and Wellness Pursuits</label>
+            </div>
+            
+            <div id="lifewellness" class="content">
+              <p class="course">Grade: 9-12</p>
+            </div>
+            
+            <div id="aclifewellness" class="content">
+              <p class="course">Grade: 10-12</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('acskilllife')">
+              <label><input type="checkbox" name="items" value="AC Skill-Based Lifetime Activities" />AC Skill-Based Lifetime Activities</label>
+            </div>
+            
+            <div id="acskilllife" class="content">
+              <p class="course">Grade: 10-12</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('skilllife')">
+              <label><input type="checkbox" name="items" value="Skill-Based Lifetime Activities" />Skill-Based Lifetime Activities</label>
+            </div>
+            
+            <div id="skilllife" class="content">
+              <p class="course">Grade: 9-12</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('boyweight')">
+              <label><input type="checkbox" name="items" value="Boys Weight Training" />Boys Weight Training</label>
+            </div>
+            
+            <div id="boyweight" class="content">
+              <p class="course">Grade: 10-12</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('girlweight')">
+              <label><input type="checkbox" name="items" value="Girls Weight Training" />Girls Weight Training</label>
+            </div>
+            
+            <div id="girlweight" class="content">
+              <p class="course">Grade: 10-12</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('skillracket')">
+              <label><input type="checkbox" name="items" value="Skill-Based - Racket sports" />Skill-Based - Racket sports</label>
+            </div>
+            
+            <div id="skillracket" class="content">
+              <p class="course">Grade: 10-12</p>
+            </div>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('athletics')">Athletics</div>
+
+          <div id="athletics" class="content">
+            <div class="folder" onclick="toggleContent('9baseball')">
+              <label><input type="checkbox" name="items" value="9th Baseball" /> 9th Baseball</label>
+            </div>
+            
+            <div id="9baseball" class="content">
+              <p class="course">Grade: 9</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('baseball')">
+              <label><input type="checkbox" name="items" value="JV/V Baseball" />JV/V Baseball</label>
+            </div>
+            
+            <div id="baseball" class="content">
+              <p class="course">Grade: 10-12</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('9boybasketball')">
+              <label><input type="checkbox" name="items" value="9th Boys Basketball" /> 9th Boys Basketball</label>
+            </div>
+            
+            <div id="9boybasketball" class="content">
+              <p class="course">Grade: 9</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('boybasketball')">
+              <label><input type="checkbox" name="items" value="JV/V Boys Basketball" />JV/V Boys Basketball</label>
+            </div>
+            
+            <div id="boybasketball" class="content">
+              <p class="course">Grade: 10-12</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('9girlbasketball')">
+              <label><input type="checkbox" name="items" value="9th Girls Basketball" /> 9th Girls Basketball</label>
+            </div>
+            
+            <div id="9girlbasketball" class="content">
+              <p class="course">Grade: 9</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('girlbasketball')">
+              <label><input type="checkbox" name="items" value="JV/V Girls Basketball" />JV/V Girls Basketball</label>
+            </div>
+            
+            <div id="girlbasketball" class="content">
+              <p class="course">Grade: 10-12</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('crosscountry')">
+              <label><input type="checkbox" name="items" value="Cross Country" />Cross Country</label>
+            </div>
+            
+            <div id="crosscountry" class="content">
+              <p class="course">Grade: 9-12</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('9fb')">
+              <label><input type="checkbox" name="items" value="9th Football" /> 9th Football</label>
+            </div>
+            
+            <div id="9fb" class="content">
+              <p class="course">Grade: 9</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('fb')">
+              <label><input type="checkbox" name="items" value="JV/V Football" />JV/V Football</label>
+            </div>
+            
+            <div id="fb" class="content">
+              <p class="course">Grade: 10-12</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('boygolf')">
+              <label><input type="checkbox" name="items" value="Boys Golf" /> Boys Golf</label>
+            </div>
+            
+            <div id="boygolf" class="content">
+              <p class="course">Grade: 9-12</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('girlgolf')">
+              <label><input type="checkbox" name="items" value="Girls Golf" /> Girls Golf</label>
+            </div>
+            
+            <div id="girlgolf" class="content">
+              <p class="course">Grade: 9-12</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('9boysoccer')">
+              <label><input type="checkbox" name="items" value="9th Boys Soccer" /> 9th Boys Soccer</label>
+            </div>
+            
+            <div id="9boysoccer" class="content">
+              <p class="course">Grade: 9</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('boysoccer')">
+              <label><input type="checkbox" name="items" value="JV/V Boys Soccer" />JV/V Boys Soccer</label>
+            </div>
+            
+            <div id="boysoccer" class="content">
+              <p class="course">Grade: 10-12</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('9girlsoccer')">
+              <label><input type="checkbox" name="items" value="9th Girls Soccer" /> 9th Girls Soccer</label>
+            </div>
+            
+            <div id="9girlsoccer" class="content">
+              <p class="course">Grade: 9</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('girlsoccer')">
+              <label><input type="checkbox" name="items" value="JV/V Girls Soccer" />JV/V Girls Soccer</label>
+            </div>
+            
+            <div id="girlsoccer" class="content">
+              <p class="course">Grade: 10-12</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('9softball')">
+              <label><input type="checkbox" name="items" value="JV/JV2 Softball" /> JV/JV2 Softball</label>
+            </div>
+            
+            <div id="9softball" class="content">
+              <p class="course">Grade: 9</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('softball')">
+              <label><input type="checkbox" name="items" value="JV/V Softball" />JV/V Softball</label>
+            </div>
+            
+            <div id="softball" class="content">
+              <p class="course">Grade: 10-12</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('9swim')">
+              <label><input type="checkbox" name="items" value=" JV Swimming" />  JV Swimming</label>
+            </div>
+            
+            <div id="9swim" class="content">
+              <p class="course">Grade: 9</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('swim')">
+              <label><input type="checkbox" name="items" value="JV/V Swimming and Diving" />JV/V Swimming and Diving</label>
+            </div>
+            
+            <div id="swim" class="content">
+              <p class="course">Grade: 10-12</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('9tennis')">
+              <label><input type="checkbox" name="items" value="9th Tennis" />9th Tennis</label>
+            </div>
+            
+            <div id="9tennis" class="content">
+              <p class="course">Grade: 9</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('tennis')">
+              <label><input type="checkbox" name="items" value="JV2/JV1/V Tennis" />JV2/JV1/V Tennis</label>
+            </div>
+            
+            <div id="tennis" class="content">
+              <p class="course">Grade: 10-12</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('boytrack')">
+              <label><input type="checkbox" name="items" value="Boys Track (Fall, Spring)" /> Boys Track (Fall, Spring)</label>
+            </div>
+            
+            <div id="boytrack" class="content">
+              <p class="course">Grade: 9-12</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('girltrack')">
+              <label><input type="checkbox" name="items" value="Girls Track (Fall, Spring)" /> Girls Track (Fall, Spring)</label>
+            </div>
+            
+            <div id="girltrack" class="content">
+              <p class="course">Grade: 9-12</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('9vb')">
+              <label><input type="checkbox" name="items" value="9th Volleyball" />9th Volleyball</label>
+            </div>
+            
+            <div id="9vb" class="content">
+              <p class="course">Grade: 9</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('vb')">
+              <label><input type="checkbox" name="items" value="JV/V Volleyball" />JV/V Volleyball</label>
+            </div>
+            
+            <div id="vb" class="content">
+              <p class="course">Grade: 10-12</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('9boywrestling')">
+              <label><input type="checkbox" name="items" value="9th Boys Wrestling" />9th Boys Wrestling</label>
+            </div>
+            
+            <div id="9boywrestling" class="content">
+              <p class="course">Grade: 9</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('boywrestling')">
+              <label><input type="checkbox" name="items" value="JV/V Boys Wrestling" />JV/V Boys Wrestling</label>
+            </div>
+            
+            <div id="boywrestling" class="content">
+              <p class="course">Grade: 10-12</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('9girlwrestling')">
+              <label><input type="checkbox" name="items" value="9th Girls Wrestling" />9th Girls Wrestling</label>
+            </div>
+            
+            <div id="9girlwrestling" class="content">
+              <p class="course">Grade: 9</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('girlwrestling')">
+              <label><input type="checkbox" name="items" value="Girls Wrestling" />Girls Wrestling</label>
+            </div>
+            
+            <div id="girlwrestling" class="content">
+              <p class="course">Grade: 10-12</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('9cheer')">
+              <label><input type="checkbox" name="items" value="9th Cheerleading" />9th Cheerleading</label>
+            </div>
+            
+            <div id="9cheer" class="content">
+              <p class="course">Grade: 9</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('cheer')">
+              <label><input type="checkbox" name="items" value="JV/V Cheerleading" />JV/V Cheerleading</label>
+            </div>
+            
+            <div id="cheer" class="content">
+              <p class="course">Grade: 10-12</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('drillstars')">
+              <label><input type="checkbox" name="items" value="Silver Stars" />Silver Stars</label>
+            </div>
+            
+            <div id="drillstars" class="content">
+              <p class="course">Prerequisite: Recommended to have previous dance experience</p>
+              <p class="course">Grade: 9</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('drill')">
+              <label><input type="checkbox" name="items" value="Drill Team" />Drill Team</label>
+            </div>
+            
+            <div id="drill" class="content">
+              <p class="course">Prerequisite: Recommended to have previous dance experience</p>
+              <p class="course">Grade: 10-12</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('drillofficers')">
+              <label><input type="checkbox" name="items" value="Drill Team Officers" />Drill Team Officers</label>
+            </div>
+            
+            <div id="drillofficers" class="content">
+              <p class="course">Grade: 11-12</p>
+            </div>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('athtraining')">Athletic Training</div>
+
+          <div id="athtraining" class="content">
+            <div class="folder" onclick="toggleContent('sportmed1')">
+              <label><input type="checkbox" name="items" value="Sports Medicine I" />Sports Medicine I</label>
+            </div>
+            
+            <div id="sportmed1" class="content">
+              <p class="course">Prerequisite: Recommended Principles of Exercise Wellness or Principles of Health Science</p>
+              
+              <p class="course">Grade: 10</p>
+
+              <p class="course">Level: 2</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('sportmed2')">
+              <label><input type="checkbox" name="items" value="Sports Medicine II" />Sports Medicine II</label>
+            </div>
+            
+            <div id="sportmed2" class="content">
+              <p class="course">Prerequisite: Sports Medicine I</p>
+              
+              <p class="course">Grade: 11</p>
+
+              <p class="course">Level: 2</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('sportmed3')">
+              <label><input type="checkbox" name="items" value="Sports Medicine III" />Sports Medicine III</label>
+            </div>
+            
+            <div id="sportmed3" class="content">
+              <p class="course">Prerequisite: Sports Medicine II</p>
+              
+              <p class="course">Grade: 12</p>
+
+              <p class="course">Level: 2</p>
+            </div>
+            </div>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('cte')">Career & Tech Education</div>
+        <div id="cte" class="content">
+        
+        <div class="folder" onclick="toggleContent('graphicdesign')">Graphic Design</div>
+
+          <div id="graphicdesign" class="content">
+        
+        <div class="folder" onclick="toggleContent('prinarts')">
+              <label><input type="checkbox" name="items" value="Principles of Arts, Audio/Video Technology & Communications" /> Principles of Arts, Audio/Video Technology & Communications</label>
+            </div>
+            
+            <div id="prinarts" class="content">
+              <p class="course">Prerequisite: None</p>
+
+              <p class="course">Grade: 9</p>
+            </div>
+        
+        <div class="folder" onclick="toggleContent('graphicdesign&media')">Graphic Design and Interactive Media</div>
+
+          <div id="graphicdesign&media" class="content">
+            <div class="folder" onclick="toggleContent('graphicdesign1')">
+              <label><input type="checkbox" name="items" value="Graphic Design & Illustration I" /> Graphic Design & Illustration I</label>
+            </div>
+            
+            <div id="graphicdesign1" class="content">
+              <p class="course">Prerequisite: Recommended to take Principles of Arts, Audio/Visual Technology, and Communications</p>
+
+              <p class="course">Grade: 10-12</p>
+
+              <p class="course">Level: 2</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('graphicdesign2')">
+              <label><input type="checkbox" name="items" value="Graphic Design & Illustration II" /> Graphic Design & Illustration II</label>
+            </div>
+            
+            <div id="graphicdesign2" class="content">
+              <p class="course">Prerequisite: Graphic Design and Illustration I</p>
+
+              <p class="course">Grade: 10-12</p>
+
+              <p class="course">Level: 3</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('digiarts')">
+              <label><input type="checkbox" name="items" value="Digital Arts & Animation" /> Digital Arts & Animation</label>
+            </div>
+            
+            <div id="digiarts" class="content">
+              <p class="course">Prerequisite: None</p>
+
+              <p class="course">Grade: 10-12</p>
+
+              <p class="course">Level: 3</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('practentrep')">
+              <label><input type="checkbox" name="items" value="Practicum In Entrepreneurship" /> Practicum In Entrepreneurship</label>
+            </div>
+            
+            <div id="practentrep" class="content">
+              <p class="course">Prerequisite: None</p>
+
+              <p class="course">Grade: 11-12</p>
+
+              <p class="course">Level: 4</p>
+              
+              <p class="course">Credit: 2</p>
+            </div>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('yearbook')">Round Up Yearbook</div>
+
+          <div id="yearbook" class="content">
+            <div class="folder" onclick="toggleContent('yearbook1')">
+              <label><input type="checkbox" name="items" value="Graphic Design & Illustration (Round-Up Yearbook)" /> Graphic Design & Illustration (Round-Up Yearbook)</label>
+            </div>
+            
+            <div id="yearbook1" class="content">
+              <p class="course">Prerequisite: Recommended to take Principles of Arts, Audio/Visual Technology, and Communications</p>
+
+              <p class="course">Grade: 10-12</p>
+
+              <p class="course">Level: 2</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('yearbook2')">
+              <label><input type="checkbox" name="items" value="Graphic Design & Illustration II/Lab (Round-Up Yearbook)" />Graphic Design & Illustration II/Lab (Round-Up Yearbook)</label>
+            </div>
+            
+            <div id="yearbook2" class="content">
+              <p class="course">Prerequisite: Graphic Design and Illustration I - Round-Up Yearbook</p>
+
+              <p class="course">Grade: 11-12</p>
+
+              <p class="course">Level: 3</p>
+              
+              <p class="course">Credit: 2</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('practyearbook')">
+              <label><input type="checkbox" name="items" value="Practicum in Graphic Design & Illustration (Round-Up Yearbook)" />Practicum in Graphic Design & Illustration (Round-Up Yearbook)</label>
+            </div>
+            
+            <div id="practyearbook" class="content">
+              <p class="course">Prerequisite: Graphic Design and Illustration II/Lab - Round-Up Yearbook</p>
+
+              <p class="course">Grade: 12</p>
+
+              <p class="course">Level: 4</p>
+              
+              <p class="course">Credit: 2</p>
+            </div>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('sidekick')">Sidekick Newspaper</div>
+
+          <div id="sidekick" class="content">
+            <div class="folder" onclick="toggleContent('sidekick1')">
+              <label><input type="checkbox" name="items" value="Graphic Design & Illustration I (Sidekick Newspaper)" />Graphic Design & Illustration I (Sidekick Newspaper)</label>
+            </div>
+            
+            <div id="sidekick1" class="content">
+              <p class="course">Prerequisite: Recommended to take Principles of Arts, Audio/Visual Technology, and Communications</p>
+
+              <p class="course">Grade: 10-12</p>
+
+              <p class="course">Level: 2</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('sidekick2')">
+              <label><input type="checkbox" name="items" value="Graphic Design & Illustration II/Lab (Sidekick Newspaper)" />Graphic Design & Illustration II/Lab (Sidekick Newspaper)</label>
+            </div>
+            
+            <div id="sidekick2" class="content">
+              <p class="course">Prerequisite: Graphic Design and Illustration I - Sidekick</p>
+
+              <p class="course">Grade: 11-12</p>
+
+              <p class="course">Level: 3</p>
+              
+              <p class="course">Credit: 2</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('practsidekick')">
+              <label><input type="checkbox" name="items" value="Practicum in Graphic Design & Illustration (Sidekick Newspaper)" />Practicum in Graphic Design & Illustration (Sidekick Newspaper)</label>
+            </div>
+            
+            <div id="practsidekick" class="content">
+              <p class="course">Prerequisite: Graphic Design and Illustration II/Lab - Sidekick</p>
+
+              <p class="course">Grade: 12</p>
+
+              <p class="course">Level: 4</p>
+              
+              <p class="course">Credit: 2</p>
+            </div>
+            </div>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('digicomm')">Digital Communications</div>
+
+          <div id="digicomm" class="content">
+        
+        <div class="folder" onclick="toggleContent('audiovideo1')">
+              <label><input type="checkbox" name="items" value="Audio/Video Production I (KCBY I - TV Station)" />Audio/Video Production I (KCBY I - TV Station)</label>
+            </div>
+            
+            <div id="audiovideo1" class="content">
+              <p class="course">Prerequisite: Recommended to take Principles of Arts, Audio/Visual Technology, and Communications</p>
+
+              <p class="course">Grade: 10-12</p>
+              
+              <p class="course">Level: 2</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('audiovideo2')">
+              <label><input type="checkbox" name="items" value="Audio/Video Production II / Lab (KCBY II - TV Station)" />Audio/Video Production II / Lab (KCBY II - TV Station)</label>
+            </div>
+            
+            <div id="audiovideo2" class="content">
+              <p class="course">Prerequisite: Audio/Video Production I</p>
+
+              <p class="course">Grade: 11-12</p>
+              
+              <p class="course">Level: 3</p>
+              
+              <p class="course">Credit: 2</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('audiovideo3')">
+              <label><input type="checkbox" name="items" value="Practicum in Audio/Video Production (KCBY III TV Station)" />Practicum in Audio/Video Production (KCBY III TV Station)</label>
+            </div>
+            
+            <div id="audiovideo3" class="content">
+              <p class="course">Prerequisite: Audio/Video Production II/Lab</p>
+
+              <p class="course">Grade: 12</p>
+              
+              <p class="course">Level: 4</p>
+              
+              <p class="course">Credit: 2</p>
+            </div>
+            </div>
+            
+           <!--BUSINESS-->
+            <div class="folder" onclick="toggleContent('Market')">Marketing and Sales</div>
+            <div id="Market" class="content">
+            <div class="folder" onclick="toggleContent('bm')">
+              <label><input type="checkbox" name="items" value="Business Management" />Business Management</label>
+            </div>
+            
+            <div id="bm" class="content">
+              <p class="course">Prerequisite: None</p>
+
+              <p class="course">Grade: 10-12</p>
+              
+              <p class="course">Level: 3</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('bim1')">
+              <label><input type="checkbox" name="items" value="Business Information Management I" />Business Information Management I</label>
+            </div>
+            
+            <div id="bim1" class="content">
+              <p class="course">Prerequisite: None</p>
+
+              <p class="course">Grade: 10-12</p>
+              
+              <p class="course">Level: 2</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('bim2')">
+              <label><input type="checkbox" name="items" value="Business Information Management II" />Business Information Management II</label>
+            </div>
+            
+            <div id="bim2" class="content">
+              <p class="course">Prerequisite: Business Information Management I</p>
+
+              <p class="course">Grade: 10-12</p>
+              
+              <p class="course">Level: 2</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('statsbus')">
+              <label><input type="checkbox" name="items" value="Statistics & Business Decision Making" />Statistics & Business Decision Making</label>
+            </div>
+            
+            <div id="statsbus" class="content">
+              <p class="course">Prerequisite: Algebra II</p>
+
+              <p class="course">Grade: 10-12</p>
+              
+              <p class="course">Level: 3</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('buslaw')">
+              <label><input type="checkbox" name="items" value="Business Law" />Business Law</label>
+            </div>
+            
+            <div id="buslaw" class="content">
+              <p class="course">Prerequisite: None</p>
+
+              <p class="course">Grade: 10-12</p>
+              
+              <p class="course">Level: 2</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('ad')">
+              <label><input type="checkbox" name="items" value="Advertising" />Advertising</label>
+            </div>
+            
+            <div id="ad" class="content">
+              <p class="course">Prerequisite: None</p>
+
+              <p class="course">Grade: 10-12</p>
+              
+              <p class="course">Level: 3</p>
+              
+              <p class="course">Credit: 0.5</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('socialmedia')">
+              <label><input type="checkbox" name="items" value="Social Media Marketing" />Social Media Marketing</label>
+            </div>
+            
+            <div id="socialmedia" class="content">
+              <p class="course">Prerequisite: None</p>
+
+              <p class="course">Grade: 10-12</p>
+              
+              <p class="course">Level: 3</p>
+              
+              <p class="course">Credit: 0.5</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('sportsenter1')">
+              <label><input type="checkbox" name="items" value="Sports & Entertainment Marketing I" />Sports & Entertainment Marketing I</label>
+            </div>
+            
+            <div id="sportsenter1" class="content">
+              <p class="course">Prerequisite: None</p>
+
+              <p class="course">Grade: 10-12</p>
+              
+              <p class="course">Level: 2</p>
+              
+              <p class="course">Credit: 0.5</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('sportsenter2')">
+              <label><input type="checkbox" name="items" value="Sports & Entertainment Marketing II" />Sports & Entertainment Marketing II</label>
+            </div>
+            
+            <div id="sportsenter2" class="content">
+              <p class="course">Prerequisite: Sports Marketing I</p>
+
+              <p class="course">Grade: 10-12</p>
+              
+              <p class="course">Level: 3</p>
+              
+              <p class="course">Credit: 0.5</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('marketing')">
+              <label><input type="checkbox" name="items" value="Marketing" />Marketing</label>
+            </div>
+            
+            <div id="marketing" class="content">
+              <p class="course">Prerequisite: None</p>
+
+              <p class="course">Grade: 10-12</p>
+              
+              <p class="course">Level: 2</p>
+            </div>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('education')">Education: Teaching and Coaching</div>
+            <div id="education" class="content">
+            <div class="folder" onclick="toggleContent('growthdevel')">
+              <label><input type="checkbox" name="items" value="Human Growth & Development" />Human Growth & Development</label>
+            </div>
+            
+            <div id="growthdevel" class="content">
+              <p class="course">Prerequisite: None</p>
+
+              <p class="course">Grade: 10-12</p>
+              
+              <p class="course">Level: 2</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('instruction')">
+              <label><input type="checkbox" name="items" value="Instructional Practices" />Instructional Practices</label>
+            </div>
+            
+            <div id="instruction" class="content">
+              <p class="course">Prerequisite: One credit from Education & Training Career Cluster</p>
+
+              <p class="course">Grade: 11-12</p>
+              
+              <p class="course">Level: 3</p>
+              
+              <p class="course">Credit: 2</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('practeach')">
+              <label><input type="checkbox" name="items" value="Practicum in Teaching and Coaching" />Practicum in Teaching and Coaching</label>
+            </div>
+            
+            <div id="practeach" class="content">
+              <p class="course">Prerequisite: Instructional Practices</p>
+
+              <p class="course">Grade: 12</p>
+              
+              <p class="course">Level: 4</p>
+              
+              <p class="course">Credit: 2</p>
+            </div>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('health')">Health Science</div>
+            <div id="health" class="content">
+            <div class="folder" onclick="toggleContent('princhealth')">
+              <label><input type="checkbox" name="items" value="Principles of Health Science" />Principles of Health Science</label>
+            </div>
+            
+            <div id="princhealth" class="content">
+              <p class="course">Prerequisite: None</p>
+
+              <p class="course">Grade: 9-12</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('medterm')">
+              <label><input type="checkbox" name="items" value="Medical Terminology" />Medical Terminology</label>
+            </div>
+            
+            <div id="medterm" class="content">
+              <p class="course">Prerequisite: Principles of Health Science (recommended)</p>
+
+              <p class="course">Grade: 10-12</p>
+              
+              <p class="course">Level: 2</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('healththeory')">
+              <label><input type="checkbox" name="items" value="Health Science Theory" />Health Science Theory</label>
+            </div>
+            
+            <div id="healththeory" class="content">
+              <p class="course">Prerequisite: Biology & 1 course form the health science pathway</p>
+
+              <p class="course">Grade: 10-12</p>
+              
+              <p class="course">Level: 3</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('anatomy')">
+              <label><input type="checkbox" name="items" value="Honors Anatomy & Physiology" />Honors Anatomy & Physiology</label>
+            </div>
+            
+            <div id="anatomy" class="content">
+              <p class="course">Prerequisite: Biology and a second science credit</p>
+
+              <p class="course">Grade: 11-12</p>
+              
+              <p class="course">Level: 3</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('microbio')">
+              <label><input type="checkbox" name="items" value="Medical Microbiology" />Medical Microbiology</label>
+            </div>
+            
+            <div id="microbio" class="content">
+              <p class="course">Prerequisite: Required: One credit in Biology, one credit in Chemistry, & Recommended at least one credit in a course from the Health Science career cluster</p>
+
+              <p class="course">Grade: 10-12</p>
+              
+              <p class="course">Level: 3</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('healthdual')">
+              <label><input type="checkbox" name="items" value="Dual Credit Practicum in Health Science - Emergency Medical Technician (EMT)" />Dual Credit Practicum in Health Science - Emergency Medical Technician (EMT)</label>
+            </div>
+            
+            <div id="healthdual" class="content">
+              <p class="course">Prerequisite: Biology, Health Science Theory, and Anatomy & Physiology (recommended)</p>
+
+              <p class="course">Grade: 12</p>
+              
+              <p class="course">Level: 4</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('patho')">
+              <label><input type="checkbox" name="items" value="Pathophysiology" />Pathophysiology</label>
+            </div>
+            
+            <div id="patho" class="content">
+              <p class="course">Prerequisite: Required: Biology, Chemistry and at least one credit in a level 2 or higher health science course</p>
+
+              <p class="course">Grade: 11-12</p>
+              
+              <p class="course">Level: 4</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('pharm')">
+              <label><input type="checkbox" name="items" value="Pharmacology" />Pharmacology</label>
+            </div>
+            
+            <div id="pharm" class="content">
+              <p class="course">Prerequisite: Required: Biology, Chemistry and Recommended least one credit in a level 2 or higher health science course</p>
+
+              <p class="course">Grade: 12</p>
+              
+              <p class="course">Level: 4</p>
+            </div>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('compsci')">Computer Science</div>
+            <div id="compsci" class="content">
+            <div class="folder" onclick="toggleContent('compsci1')">
+              <label><input type="checkbox" name="items" value="Computer Science I" />Computer Science I</label>
+            </div>
+            
+            <div id="compsci1" class="content">
+              <p class="course">Prerequisite: Algebra I</p>
+
+              <p class="course">Grade: 9-12</p>
+
+              <p class="course">Level: 2</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('compsci2')">
+              <label><input type="checkbox" name="items" value="Computer Science II H" />Computer Science II H</label>
+            </div>
+            
+            <div id="compsci2" class="content">
+              <p class="course">Prerequisite: Algebra 1 and Computer Science I</p>
+
+              <p class="course">Grade: 10-12</p>
+
+              <p class="course">Level: 3</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('compsci2')">
+              <label><input type="checkbox" name="items" value="AP Computer Science Principles" />AP Computer Science Principles</label>
+            </div>
+            
+            <div id="compsci2" class="content">
+              <p class="course">Prerequisite: None</p>
+
+              <p class="course">Grade: 9-12</p>
+
+              <p class="course">Level: 4</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('apcompsciprinc')">
+              <label><input type="checkbox" name="items" value="AP Computer Science Principles" />AP Computer Science Principles</label>
+            </div>
+            
+            <div id="apcompsciprinc" class="content">
+              <p class="course">Prerequisite: None</p>
+
+              <p class="course">Grade: 9-12</p>
+
+              <p class="course">Level: 4</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('apcompsci')">
+              <label><input type="checkbox" name="items" value="AP Computer Science" />AP Computer Science</label>
+            </div>
+            
+            <div id="apcompsci" class="content">
+              <p class="course">Prerequisite: Algbera I</p>
+
+              <p class="course">Grade: 11-12</p>
+
+              <p class="course">Level: 4</p>
+              
+              <p class="course">Credit: 2</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('compsci3')">
+              <label><input type="checkbox" name="items" value="Computer Science III" />Computer Science III</label>
+            </div>
+            
+            <div id="compsci3" class="content">
+              <p class="course">Prerequisite: Computer Science II or AP Computer Science A</p>
+
+              <p class="course">Grade: 11-12</p>
+
+              <p class="course">Level: 4</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('practstem')">
+              <label><input type="checkbox" name="items" value="Practicum in STEM I" />Practicum in STEM I</label>
+            </div>
+            
+            <div id="practstem" class="content">
+              <p class="course">Prerequisite: Algebra l & Geometry</p>
+
+              <p class="course">Grade: 11-12</p>
+
+              <p class="course">Level: 4</p>
+              
+              <p class="course">Credit: 2</p>
+            </div>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('engin')">Engineering</div>
+            <div id="engin" class="content">
+            <div class="folder" onclick="toggleContent('enginpres')">
+              <label><input type="checkbox" name="items" value="Engineering Design & Presentation" />Engineering Design & Presentation</label>
+            </div>
+            
+            <div id="enginpres" class="content">
+              <p class="course">Prerequisite: Algebra I</p>
+
+              <p class="course">Grade: 10-12</p>
+
+              <p class="course">Level: 3</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('enginprob')">
+              <label><input type="checkbox" name="items" value="Engineering Design & Problem Solving" />Engineering Design & Problem Solving</label>
+            </div>
+            
+            <div id="enginprob" class="content">
+              <p class="course">Prerequisite: Geometry & Two STEM Pathway Courses</p>
+              
+              <p class="course">Grade: 11-12</p>
+
+              <p class="course">Level: 4</p>
+            </div>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('robotics')">Robotics & Automation Technology</div>
+            <div id="robotics" class="content">
+            <div class="folder" onclick="toggleContent('robotics1')">
+              <label><input type="checkbox" name="items" value="Robotics I" />Robotics I</label>
+            </div>
+            
+            <div id="robotics1" class="content">
+              <p class="course">Prerequisite: Principles of Applied Engineering (preferred)</p>
+
+              <p class="course">Grade: 10-12</p>
+
+              <p class="course">Level: 2</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('robotics2')">
+              <label><input type="checkbox" name="items" value="Robotics II" />Robotics II</label>
+            </div>
+            
+            <div id="robotics2" class="content">
+              <p class="course">Prerequisite: Robotics I</p>
+
+              <p class="course">Grade: 11-12</p>
+
+              <p class="course">Level: 3</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('pracrobot')">
+              <label><input type="checkbox" name="items" value="Practicum in Robotics and Automation Technology" />Practicum in Robotics and Automation Technology</label>
+            </div>
+            
+            <div id="pracrobot" class="content">
+              <p class="course">Prerequisite: Robotics II</p>
+
+              <p class="course">Grade: 11-12</p>
+
+              <p class="course">Level: 4</p>
+
+              <p class="course">Credit: 2</p>
+            </div>
+            </div>
+
+            <div class="folder" onclick="toggleContent('finance')">Finance</div>
+            <div id="finance" class="content">
+            <div class="folder" onclick="toggleContent('money')">
+              <label><input type="checkbox" name="items" value="Money Matters" />Money Matters</label>
+            </div>
+            
+            <div id="money" class="content">
+              <p class="course">Prerequisite: None</p>
+
+              <p class="course">Grade: 10-12</p>
+
+              <p class="course">Level: 2</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('security')">
+              <label><input type="checkbox" name="items" value="Securities & Investments" />Securities & Investments</label>
+            </div>
+            
+            <div id="security" class="content">
+              <p class="course">Prerequisite: Recommended: Money Matters</p>
+
+              <p class="course">Grade: 10-12</p>
+
+              <p class="course">Level: 3</p>
+            </div>
+            </div>
+          </div>
+          <div class="folder" onclick="toggleContent('finearts')">Fine Arts</div>
+            <div id="finearts" class="content">
+            <div class="folder" onclick="toggleContent('art')">Art</div>
+            <div id="art" class="content">
+            
+            <div class="folder" onclick="toggleContent('art1')">
+              <label><input type="checkbox" name="items" value="Art I" />Art I</label>
+            </div>
+            
+            <div id="art1" class="content">
+              <p class="course">Prerequisite: None</p>
+
+              <p class="course">Grade: 10-12</p>
+
+              <p class="course">Level: 2</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('art2')">
+              <label><input type="checkbox" name="items" value="Honors Art II" />Honors Art II</label>
+            </div>
+            
+            <div id="art2" class="content">
+              <p class="course">Prerequisite: Art I</p>
+
+              <p class="course">Grade: 10-12</p>
+
+              <p class="course">Level: 3</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('art2digi')">
+              <label><input type="checkbox" name="items" value="Art II - Digital Arts & Media" />Art II - Digital Arts & Media</label>
+            </div>
+            
+            <div id="art2digi" class="content">
+              <p class="course">Prerequisite: Art I</p>
+
+              <p class="course">Grade: 10-12</p>
+
+              <p class="course">Level: 3</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('apartdraw')">
+              <label><input type="checkbox" name="items" value="AP Studio Art Drawing" />AP Studio Art Drawing</label>
+            </div>
+            
+            <div id="apartdraw" class="content">
+              <p class="course">Prerequisite: Art II Drawing or Art II Honors or teacher permission</p>
+
+              <p class="course">Grade: 10-12</p>
+
+              <p class="course">Level: 4</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('apartdesign')">
+              <label><input type="checkbox" name="items" value="AP Studio Art 3D Design" />AP Studio Art 3D Design</label>
+            </div>
+            
+            <div id="apartdesign" class="content">
+              <p class="course">Prerequisite: Art I & Art II Sculpture</p>
+
+              <p class="course">Grade: 10-12</p>
+
+              <p class="course">Level: 4</p>
+            </div>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('theatre')">Theatre</div>
+            <div id="theatre" class="content">
+            
+            <div class="folder" onclick="toggleContent('theatre1')">
+              <label><input type="checkbox" name="items" value="Theater Arts I" />Theater Arts I</label>
+            </div>
+            
+            <div id="theatre1" class="content">
+              <p class="course">Prerequisite: None</p>
+
+              <p class="course">Grade: 10-12</p>
+
+              <p class="course">Level: 2</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('theatre2')">
+              <label><input type="checkbox" name="items" value="Theater Arts II" />Theater Arts II</label>
+            </div>
+            
+            <div id="theatre2" class="content">
+              <p class="course">Prerequisite: Theater I</p>
+
+              <p class="course">Grade: 10-12</p>
+
+              <p class="course">Level: 2</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('theatre3')">
+              <label><input type="checkbox" name="items" value="Theater Arts III" />Theater Arts III</label>
+            </div>
+            
+            <div id="theatre3" class="content">
+              <p class="course">Prerequisite: Auditioned Class/Theater II; Director Approval</p>
+
+              <p class="course">Grade: 11</p>
+
+              <p class="course">Level: 2</p>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('theatre4')">
+              <label><input type="checkbox" name="items" value="Theater Arts IV" />Theater Arts IV</label>
+            </div>
+            
+            <div id="theatre4" class="content">
+              <p class="course">Prerequisite: Auditioned Class/Theater II; Director Approval</p>
+
+              <p class="course">Grade: 12</p>
+
+              <p class="course">Level: 2</p>
+            </div>
+            </div>
+            
+              <div class="folder" onclick="toggleContent('band')">Band</div>
+            <div id="band" class="content">
+            
+            <div class="folder" onclick="toggleContent('wind')">
+              <label><input type="checkbox" name="items" value="Wind Symphony & Instrumental Ensemble" />Wind Symphony & Instrumental Ensemble</label>
+            </div>
+            
+            <div id="wind" class="content">
+              <p class="course">Prerequisite: Audition Only</p>
+
+              <p class="course">Grade: 10-12</p>
+
+              <p class="course">Level: 2</p>
+              
+              <p class="course">Credit: 2</p>
+            </div>
+            </div>
+            
+            <div class="folder" onclick="toggleContent('choir')">Choir</div>
+            <div id="choir" class="content">
+            
+            <div class="folder" onclick="toggleContent('acap')">
+              <label><input type="checkbox" name="items" value="A Cappella Mixed Choir" />A Cappella Mixed Choir</label>
+            </div>
+            
+            <div id="acap" class="content">
+              <p class="course">Prerequisite: Audition Only</p>
+
+              <p class="course">Grade: 10-12</p>
+
+              <p class="course">Level: 2</p>
+            </div>
+            </div>
+            </div>
+          
+          </div>
+          
+          
+    <br>
+    <button type="submit">Add to Selection</button>
+    </form>
+    <br>
+    <div id="selected-items-container">
+      <p id='coursesshown'>Selected Courses:</p>
+      <p id="selected-items"></p>
+    </div>
+    <script>
+      function toggleContent(id) {
+        var element = document.getElementById(id)
+
+        if (element.style.display === "none" || element.style.display === "") {
+          element.style.display = "block"
+        } else {
+          element.style.display = "none"
+        }
+      }
+      function moveSelectedItems(event) {
+            event.preventDefault();
+            var selectedItems = [];
+            var checkboxes = document.querySelectorAll('input[name="items"]:checked');
+            checkboxes.forEach(cb => selectedItems.push(cb.value));
+            document.getElementById("selected-items").innerText = selectedItems.join("\n");
+        }
+    </script>
+  </body>
+</html>
+
+
+<style>
+
+body{
+  background-color: #993131
+}
+
+h1{
+  font-size: 40px;
+  background-color: #EBDAC3;
+  text-align: center;
+  border-style: solid;
+  border-width: 2px
+}
+
+.folder{
+  font-size: 20px;
+  background-color: #EBDAC3;
+  border-style: solid;
+  border-width: 2px
+}
+
+.course{
+  font-size: 20px;
+  background-color: #ed9685;
+  border-style: solid;
+  border-width: 2px
+}
+
+label{
+  font-weight: bold;
+}
+
+#coursesshown{
+  font-weight: bold;
+  font-size: 27px;
+}
+
+#selected-items{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#selected-items-container{
+  background-color: white;
+  border-radius: 0%;
+  text-align: center;
+  border: 2px solid black;
+}
+
+button {
+  background-color: #E99696;
+  color: black;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #E67B7B; 
+  transform: translateY(-3px);
+}
+
+
+
+</style>
